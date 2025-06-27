@@ -138,22 +138,20 @@ export default function Landing() {
           </div>
           
           {/* Solutions Grid */}
-          <div className="space-y-12">
+          <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
             {solutions.map((solution) => (
-              <div key={solution.id} className="max-w-4xl mx-auto">
-                <div className="grid md:grid-cols-2 gap-8 items-start">
-                  <SolutionCard 
-                    {...solution} 
-                    onVideoOpen={handleVideoOpen}
-                  />
-                  <SolutionDetails
-                    id={solution.id}
-                    title={solution.title}
-                    techDetails={solution.techDetails}
-                    productTeam={solution.productTeam}
-                    functionalTeam={solution.functionalTeam}
-                  />
-                </div>
+              <div key={solution.id} className="flex flex-col">
+                <SolutionCard 
+                  {...solution} 
+                  onVideoOpen={handleVideoOpen}
+                />
+                <SolutionDetails
+                  id={solution.id}
+                  title={solution.title}
+                  techDetails={solution.techDetails}
+                  productTeam={solution.productTeam}
+                  functionalTeam={solution.functionalTeam}
+                />
               </div>
             ))}
           </div>

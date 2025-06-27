@@ -32,16 +32,16 @@ export default function SolutionDetails({
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200 mt-6">
+    <div className="bg-white rounded-lg shadow-sm border border-gray-200 mt-4">
       <button
         onClick={() => setIsExpanded(!isExpanded)}
-        className="w-full flex items-center justify-between p-4 hover:bg-gray-50 transition-colors duration-200"
+        className="w-full flex items-center justify-between p-3 hover:bg-gray-50 transition-colors duration-200"
       >
-        <span className="font-medium text-exl-midnight">View Detailed Information</span>
+        <span className="font-medium text-exl-midnight text-sm">Detailed Information</span>
         {isExpanded ? (
-          <ChevronUp className="h-5 w-5 text-exl-slate" />
+          <ChevronUp className="h-4 w-4 text-exl-slate" />
         ) : (
-          <ChevronDown className="h-5 w-5 text-exl-slate" />
+          <ChevronDown className="h-4 w-4 text-exl-slate" />
         )}
       </button>
       
@@ -51,107 +51,107 @@ export default function SolutionDetails({
           <div className="flex border-b border-gray-200">
             <button
               onClick={() => setActiveTab("tech")}
-              className={`flex items-center px-4 py-3 font-medium text-sm transition-colors duration-200 ${
+              className={`flex items-center px-2 py-2 font-medium text-xs transition-colors duration-200 flex-1 justify-center ${
                 activeTab === "tech"
                   ? "text-exl-orange border-b-2 border-exl-orange bg-orange-50"
                   : "text-exl-slate hover:text-exl-midnight"
               }`}
             >
-              <Code className="h-4 w-4 mr-2" />
-              Tech Details
+              <Code className="h-3 w-3 mr-1" />
+              Tech
             </button>
             <button
               onClick={() => setActiveTab("product")}
-              className={`flex items-center px-4 py-3 font-medium text-sm transition-colors duration-200 ${
+              className={`flex items-center px-2 py-2 font-medium text-xs transition-colors duration-200 flex-1 justify-center ${
                 activeTab === "product"
                   ? "text-exl-orange border-b-2 border-exl-orange bg-orange-50"
                   : "text-exl-slate hover:text-exl-midnight"
               }`}
             >
-              <Users className="h-4 w-4 mr-2" />
-              Product Team
+              <Users className="h-3 w-3 mr-1" />
+              Product
             </button>
             <button
               onClick={() => setActiveTab("functional")}
-              className={`flex items-center px-4 py-3 font-medium text-sm transition-colors duration-200 ${
+              className={`flex items-center px-2 py-2 font-medium text-xs transition-colors duration-200 flex-1 justify-center ${
                 activeTab === "functional"
                   ? "text-exl-orange border-b-2 border-exl-orange bg-orange-50"
                   : "text-exl-slate hover:text-exl-midnight"
               }`}
             >
-              <Settings className="h-4 w-4 mr-2" />
-              Functional Team
+              <Settings className="h-3 w-3 mr-1" />
+              Functional
             </button>
           </div>
 
           {/* Tab Content */}
-          <div className="p-6">
+          <div className="p-4">
             {activeTab === "tech" && (
-              <div className="space-y-4">
-                <h4 className="font-semibold text-exl-midnight mb-3">Technical Specifications</h4>
-                <div className="grid md:grid-cols-3 gap-4">
-                  <div>
-                    <h5 className="font-medium text-exl-midnight mb-2">Technologies</h5>
-                    <ul className="space-y-1">
-                      {techDetails.technologies.map((tech, index) => (
-                        <li key={index} className="text-sm text-exl-slate">• {tech}</li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
-                    <h5 className="font-medium text-exl-midnight mb-2">Architecture</h5>
-                    <p className="text-sm text-exl-slate">{techDetails.architecture}</p>
-                  </div>
-                  <div>
-                    <h5 className="font-medium text-exl-midnight mb-2">Deployment</h5>
-                    <p className="text-sm text-exl-slate">{techDetails.deployment}</p>
-                  </div>
+              <div className="space-y-3">
+                <div>
+                  <h5 className="font-medium text-exl-midnight mb-2 text-sm">Technologies</h5>
+                  <ul className="space-y-1">
+                    {techDetails.technologies.slice(0, 4).map((tech, index) => (
+                      <li key={index} className="text-xs text-exl-slate">• {tech}</li>
+                    ))}
+                    {techDetails.technologies.length > 4 && (
+                      <li className="text-xs text-exl-slate">• +{techDetails.technologies.length - 4} more</li>
+                    )}
+                  </ul>
+                </div>
+                <div>
+                  <h5 className="font-medium text-exl-midnight mb-2 text-sm">Architecture</h5>
+                  <p className="text-xs text-exl-slate leading-relaxed">{techDetails.architecture}</p>
+                </div>
+                <div>
+                  <h5 className="font-medium text-exl-midnight mb-2 text-sm">Deployment</h5>
+                  <p className="text-xs text-exl-slate leading-relaxed">{techDetails.deployment}</p>
                 </div>
               </div>
             )}
 
             {activeTab === "product" && (
-              <div className="space-y-4">
-                <h4 className="font-semibold text-exl-midnight mb-3">Product Team</h4>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <h5 className="font-medium text-exl-midnight mb-2">Team Lead</h5>
-                    <p className="text-sm text-exl-slate mb-4">{productTeam.lead}</p>
-                    
-                    <h5 className="font-medium text-exl-midnight mb-2">Team Members</h5>
-                    <ul className="space-y-1">
-                      {productTeam.members.map((member, index) => (
-                        <li key={index} className="text-sm text-exl-slate">• {member}</li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
-                    <h5 className="font-medium text-exl-midnight mb-2">Contact</h5>
-                    <p className="text-sm text-exl-slate">{productTeam.contact}</p>
-                  </div>
+              <div className="space-y-3">
+                <div>
+                  <h5 className="font-medium text-exl-midnight mb-2 text-sm">Team Lead</h5>
+                  <p className="text-xs text-exl-slate mb-3">{productTeam.lead}</p>
+                  
+                  <h5 className="font-medium text-exl-midnight mb-2 text-sm">Team Members</h5>
+                  <ul className="space-y-1">
+                    {productTeam.members.slice(0, 3).map((member, index) => (
+                      <li key={index} className="text-xs text-exl-slate">• {member}</li>
+                    ))}
+                    {productTeam.members.length > 3 && (
+                      <li className="text-xs text-exl-slate">• +{productTeam.members.length - 3} more</li>
+                    )}
+                  </ul>
+                </div>
+                <div>
+                  <h5 className="font-medium text-exl-midnight mb-2 text-sm">Contact</h5>
+                  <p className="text-xs text-exl-slate">{productTeam.contact}</p>
                 </div>
               </div>
             )}
 
             {activeTab === "functional" && (
-              <div className="space-y-4">
-                <h4 className="font-semibold text-exl-midnight mb-3">Functional Team</h4>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <h5 className="font-medium text-exl-midnight mb-2">Team Lead</h5>
-                    <p className="text-sm text-exl-slate mb-4">{functionalTeam.lead}</p>
-                    
-                    <h5 className="font-medium text-exl-midnight mb-2">Team Members</h5>
-                    <ul className="space-y-1">
-                      {functionalTeam.members.map((member, index) => (
-                        <li key={index} className="text-sm text-exl-slate">• {member}</li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
-                    <h5 className="font-medium text-exl-midnight mb-2">Contact</h5>
-                    <p className="text-sm text-exl-slate">{functionalTeam.contact}</p>
-                  </div>
+              <div className="space-y-3">
+                <div>
+                  <h5 className="font-medium text-exl-midnight mb-2 text-sm">Team Lead</h5>
+                  <p className="text-xs text-exl-slate mb-3">{functionalTeam.lead}</p>
+                  
+                  <h5 className="font-medium text-exl-midnight mb-2 text-sm">Team Members</h5>
+                  <ul className="space-y-1">
+                    {functionalTeam.members.slice(0, 3).map((member, index) => (
+                      <li key={index} className="text-xs text-exl-slate">• {member}</li>
+                    ))}
+                    {functionalTeam.members.length > 3 && (
+                      <li className="text-xs text-exl-slate">• +{functionalTeam.members.length - 3} more</li>
+                    )}
+                  </ul>
+                </div>
+                <div>
+                  <h5 className="font-medium text-exl-midnight mb-2 text-sm">Contact</h5>
+                  <p className="text-xs text-exl-slate">{functionalTeam.contact}</p>
                 </div>
               </div>
             )}
