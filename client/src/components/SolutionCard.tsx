@@ -7,9 +7,11 @@ interface SolutionCardProps {
   bgGradient: string;
   iconPath: string;
   demoLink: string;
+  videoSrc: string;
   techLink: string;
   productLink: string;
   functionalLink: string;
+  onVideoOpen: (videoSrc: string, title: string) => void;
 }
 
 export default function SolutionCard({
@@ -19,12 +21,18 @@ export default function SolutionCard({
   bgGradient,
   iconPath,
   demoLink,
+  videoSrc,
   techLink,
   productLink,
-  functionalLink
+  functionalLink,
+  onVideoOpen
 }: SolutionCardProps) {
   const openLink = (url: string) => {
     window.open(url, "_blank");
+  };
+
+  const handleDemoClick = () => {
+    onVideoOpen(videoSrc, title);
   };
 
   return (
