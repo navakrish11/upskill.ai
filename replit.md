@@ -105,3 +105,9 @@ Changelog:
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+
+### Project Requirements
+- Landing page showcasing three AI-powered training solutions
+- Video integration for demo playback in modal windows
+- Brand-compliant design using EXL colors and logo
+- NO login/sign-up functionality (removed per user request)

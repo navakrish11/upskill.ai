@@ -56,7 +56,7 @@ export default function SolutionCard({
         {/* Action Links */}
         <div className="space-y-3">
           <button 
-            onClick={() => openLink(demoLink)}
+            onClick={handleDemoClick}
             className="flex items-center text-exl-orange hover:text-orange-600 font-medium transition-colors duration-200 w-full"
           >
             <Play className="h-5 w-5 mr-2 fill-current" />

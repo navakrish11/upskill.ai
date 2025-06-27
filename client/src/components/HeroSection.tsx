@@ -1,6 +1,10 @@
 import { Button } from "@/components/ui/button";
 
-export default function HeroSection() {
+interface HeroSectionProps {
+  onVideoOpen: (videoSrc: string, title: string) => void;
+}
+
+export default function HeroSection({ onVideoOpen }: HeroSectionProps) {
   const handleGetStarted = () => {
     const element = document.getElementById("ai-trainer");
     if (element) {
@@ -9,7 +13,7 @@ export default function HeroSection() {
   };
 
   const handleWatchDemo = () => {
-    window.open("https://example.com/ai-trainer-demo", "_blank");
+    onVideoOpen("/videos/sample-video.mp4", "AI Trainer");
   };
 
   return (
