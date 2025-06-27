@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import SolutionCard from "@/components/SolutionCard";
+import SolutionDetails from "@/components/SolutionDetails";
 import TechnologyShowcase from "@/components/TechnologyShowcase";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
@@ -18,7 +19,22 @@ const solutions = [
     videoSrc: "/videos/ai-trainer-demo.mp4",
     techLink: "https://example.com/ai-trainer-tech",
     productLink: "https://example.com/ai-trainer-product",
-    functionalLink: "https://example.com/ai-trainer-functional"
+    functionalLink: "https://example.com/ai-trainer-functional",
+    techDetails: {
+      technologies: ["React Native", "TensorFlow", "OpenAI GPT-4", "Azure Speech Services", "Unity 3D", "Node.js"],
+      architecture: "Microservices architecture with AI model orchestration, real-time avatar rendering, and cloud-based document processing",
+      deployment: "Azure Container Instances with auto-scaling, CDN for avatar assets, and global AI model distribution"
+    },
+    productTeam: {
+      lead: "Sarah Johnson - Senior Product Manager",
+      members: ["Mike Chen - Product Designer", "Lisa Rodriguez - User Research Lead", "James Park - Product Analyst"],
+      contact: "ai-trainer-product@exl.com"
+    },
+    functionalTeam: {
+      lead: "David Kumar - Functional Lead",
+      members: ["Rachel Smith - Training Specialist", "Tom Wilson - Content Strategist", "Maria Garcia - Learning Experience Designer"],
+      contact: "ai-trainer-functional@exl.com"
+    }
   },
   {
     id: "miai-simulator",
@@ -30,19 +46,49 @@ const solutions = [
     videoSrc: "/videos/miai-call-demo.mp4",
     techLink: "https://example.com/miai-call-tech",
     productLink: "https://example.com/miai-call-product",
-    functionalLink: "https://example.com/miai-call-functional"
+    functionalLink: "https://example.com/miai-call-functional",
+    techDetails: {
+      technologies: ["WebRTC", "Python ML Pipeline", "Azure Cognitive Services", "Redis", "PostgreSQL", "React.js"],
+      architecture: "Real-time communication platform with AI-powered sentiment analysis, voice recognition, and adaptive response generation",
+      deployment: "Kubernetes cluster with load balancing, real-time analytics dashboard, and secure call recording infrastructure"
+    },
+    productTeam: {
+      lead: "Alex Thompson - Product Manager",
+      members: ["Jennifer Lee - UX Designer", "Carlos Rodriguez - Product Owner", "Emily Zhang - Business Analyst"],
+      contact: "miai-simulator-product@exl.com"
+    },
+    functionalTeam: {
+      lead: "Robert Chen - Operations Lead",
+      members: ["Ashley Brown - Call Center Expert", "Michael Davis - Quality Assurance", "Sandra Martinez - Training Coordinator"],
+      contact: "miai-simulator-functional@exl.com"
+    }
   },
   {
     id: "gamification",
     title: "Gamification Experience",
     description: "Enhances learning through immersive, visual, game-like business scenarios. Features leaderboards, live scores, and unlockable content for skill mastery.",
     bgGradient: "from-green-500 to-emerald-600",
-    iconPath: "M5 16L3 5H1V3H4L6 14H18L20 7H8V5H21C21.6 5 22 5.4 22 6C22 6.2 21.9 6.3 21.9 6.4L19.5 15.2C19.3 15.7 18.8 16 18.3 16H5ZM7 18C6.4 18 6 18.4 6 19S6.4 20 7 20 8 19.6 8 19 7.6 18 7 18ZM17 18C16.4 18 16 18.4 16 19S6.4 20 17 20 18 19.6 18 19 17.6 18 17 18Z",
+    iconPath: "M5 16L3 5H1V3H4L6 14H18L20 7H8V5H21C21.6 5 22 5.4 22 6C22 6.2 21.9 6.3 21.9 6.4L19.5 15.2C19.3 15.7 18.8 16 18.3 16H5ZM7 18C6.4 18 6 18.4 6 19S6.4 20 7 20 8 19.6 8 19 7.6 18 7 18ZM17 18C16.4 18 16 18.4 16 19S16.4 20 17 20 18 19.6 18 19 17.6 18 17 18Z",
     demoLink: "https://example.com/gamification-demo",
     videoSrc: "/videos/gamification-demo.mp4",
     techLink: "https://example.com/gamification-tech",
     productLink: "https://example.com/gamification-product",
-    functionalLink: "https://example.com/gamification-functional"
+    functionalLink: "https://example.com/gamification-functional",
+    techDetails: {
+      technologies: ["Unity Engine", "C# .NET Core", "MongoDB", "Socket.IO", "AWS GameLift", "Blockchain (NFTs)"],
+      architecture: "Multi-player game engine with real-time scoring, achievement systems, and blockchain-based certification",
+      deployment: "AWS cloud gaming infrastructure with global multiplayer support and scalable leaderboard systems"
+    },
+    productTeam: {
+      lead: "Kevin Walsh - Game Product Manager",
+      members: ["Sophie Turner - Game Designer", "Ryan O'Connor - Product Strategist", "Nina Patel - Monetization Analyst"],
+      contact: "gamification-product@exl.com"
+    },
+    functionalTeam: {
+      lead: "Michelle Rodriguez - Learning Games Lead",
+      members: ["Jason Kim - Educational Psychologist", "Amanda Foster - Content Developer", "Daniel Liu - Assessment Specialist"],
+      contact: "gamification-functional@exl.com"
+    }
   }
 ];
 
@@ -92,13 +138,23 @@ export default function Landing() {
           </div>
           
           {/* Solutions Grid */}
-          <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+          <div className="space-y-12">
             {solutions.map((solution) => (
-              <SolutionCard 
-                key={solution.id} 
-                {...solution} 
-                onVideoOpen={handleVideoOpen}
-              />
+              <div key={solution.id} className="max-w-4xl mx-auto">
+                <div className="grid md:grid-cols-2 gap-8 items-start">
+                  <SolutionCard 
+                    {...solution} 
+                    onVideoOpen={handleVideoOpen}
+                  />
+                  <SolutionDetails
+                    id={solution.id}
+                    title={solution.title}
+                    techDetails={solution.techDetails}
+                    productTeam={solution.productTeam}
+                    functionalTeam={solution.functionalTeam}
+                  />
+                </div>
+              </div>
             ))}
           </div>
         </div>

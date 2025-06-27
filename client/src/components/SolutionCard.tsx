@@ -1,4 +1,4 @@
-import { Play, FileText, Users, Settings } from "lucide-react";
+import { Play } from "lucide-react";
 
 interface SolutionCardProps {
   id: string;
@@ -57,31 +57,10 @@ export default function SolutionCard({
         <div className="space-y-3">
           <button 
             onClick={handleDemoClick}
-            className="flex items-center text-exl-orange hover:text-orange-600 font-medium transition-colors duration-200 w-full"
+            className="flex items-center justify-center bg-exl-orange text-white px-6 py-3 rounded-lg font-medium hover:bg-orange-600 transition-colors duration-200 w-full"
           >
             <Play className="h-5 w-5 mr-2 fill-current" />
             View Demo
-          </button>
-          <button 
-            onClick={() => openLink(techLink)}
-            className="flex items-center text-exl-slate hover:text-exl-midnight font-medium transition-colors duration-200 w-full"
-          >
-            <FileText className="h-5 w-5 mr-2" />
-            Tech Details
-          </button>
-          <button 
-            onClick={() => openLink(productLink)}
-            className="flex items-center text-exl-slate hover:text-exl-midnight font-medium transition-colors duration-200 w-full"
-          >
-            <Users className="h-5 w-5 mr-2" />
-            Product Team
-          </button>
-          <button 
-            onClick={() => openLink(functionalLink)}
-            className="flex items-center text-exl-slate hover:text-exl-midnight font-medium transition-colors duration-200 w-full"
-          >
-            <Settings className="h-5 w-5 mr-2" />
-            Functional Team
           </button>
         </div>
       </div>

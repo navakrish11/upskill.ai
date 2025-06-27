@@ -101,6 +101,8 @@ This is a modern full-stack web application showcasing EXL's flagship AI initiat
 
 Changelog:
 - June 27, 2025. Initial setup
+- June 27, 2025. Added video modal functionality for demo playback
+- June 27, 2025. Integrated Tech Details, Product Team, and Functional Team information directly on landing page with expandable sections
 
 ## User Preferences
 
