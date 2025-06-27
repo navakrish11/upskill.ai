@@ -29,7 +29,7 @@ export default function SolutionDetails({
   functionalTeam
 }: SolutionDetailsProps) {
   const [activeTab, setActiveTab] = useState("tech");
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(true);
 
   return (
     <div className="bg-white rounded-lg shadow-sm border border-gray-200 mt-4">
