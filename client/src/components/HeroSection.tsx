@@ -13,7 +13,7 @@ export default function HeroSection({ onVideoOpen }: HeroSectionProps) {
   };
 
   const handleWatchDemo = () => {
-    onVideoOpen("/videos/sample-video.mp4", "AI Trainer");
+    onVideoOpen("/videos/ai-trainer-demo.mp4", "AI Trainer");
   };
 
   return (

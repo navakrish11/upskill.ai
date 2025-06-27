@@ -6,9 +6,7 @@ import { Button } from "@/components/ui/button";
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const handleLogin = () => {
-    window.open("https://example.com/login", "_blank");
-  };
+
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -61,16 +59,8 @@ export default function Header() {
             </button>
           </nav>
           
-          {/* Login CTA */}
-          <div className="flex items-center space-x-4">
-            <Button 
-              onClick={handleLogin}
-              className="bg-exl-orange text-white px-6 py-2 rounded-lg font-medium hover:bg-orange-600 transition-colors duration-200"
-            >
-              Login
-            </Button>
-            
-            {/* Mobile menu button */}
+          {/* Mobile menu button */}
+          <div className="flex items-center">
             <button 
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="md:hidden p-2 rounded-md text-exl-slate hover:text-exl-orange"

@@ -1,12 +1,15 @@
 import { Button } from "@/components/ui/button";
 
 export default function CallToAction() {
-  const handleStartTrial = () => {
-    window.open("https://example.com/login", "_blank");
-  };
-
   const handleScheduleDemo = () => {
     window.open("mailto:devlead@example.com?subject=Demo Request&body=I would like to schedule a demo of Upskill.AI", "_blank");
+  };
+
+  const handleLearnMore = () => {
+    const element = document.getElementById("ai-trainer");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   };
 
   return (
@@ -21,10 +24,10 @@ export default function CallToAction() {
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button 
-            onClick={handleStartTrial}
+            onClick={handleLearnMore}
             className="bg-exl-orange text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-orange-600 transition-all duration-200 transform hover:scale-105"
           >
-            Start Free Trial
+            Learn More
           </Button>
           <Button 
             onClick={handleScheduleDemo}
