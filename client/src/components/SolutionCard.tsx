@@ -49,9 +49,11 @@ export default function SolutionCard({
       
       <div className="p-8 flex flex-col flex-grow">
         <h3 className="text-2xl font-bold text-exl-midnight mb-4">{title}</h3>
-        <p className="text-exl-slate mb-6 leading-relaxed flex-grow">
-          {description}
-        </p>
+        <div className="h-24 overflow-hidden mb-6">
+          <p className="text-exl-slate leading-relaxed">
+            {description}
+          </p>
+        </div>
         
         {/* Action Links */}
         <div className="space-y-3 mt-auto">
