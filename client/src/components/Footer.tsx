@@ -111,14 +111,7 @@ export default function Footer() {
                   Gamification Demo
                 </button>
               </li>
-              <li>
-                <button 
-                  onClick={() => openLink("https://example.com/login")}
-                  className="text-gray-300 hover:text-exl-orange transition-colors duration-200"
-                >
-                  Login Portal
-                </button>
-              </li>
+
             </ul>
           </div>
         </div>
