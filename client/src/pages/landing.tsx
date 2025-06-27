@@ -138,9 +138,9 @@ export default function Landing() {
           </div>
           
           {/* Solutions Grid */}
-          <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+          <div className="grid md:grid-cols-3 gap-8 lg:gap-12 items-start">
             {solutions.map((solution) => (
-              <div key={solution.id} className="flex flex-col">
+              <div key={solution.id} className="flex flex-col h-full">
                 <SolutionCard 
                   {...solution} 
                   onVideoOpen={handleVideoOpen}

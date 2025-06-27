@@ -36,9 +36,9 @@ export default function SolutionCard({
   };
 
   return (
-    <div id={id} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+    <div id={id} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 h-full flex flex-col">
       {/* Solution visual representation */}
-      <div className={`h-48 bg-gradient-to-br ${bgGradient} rounded-t-2xl relative overflow-hidden`}>
+      <div className={`h-48 bg-gradient-to-br ${bgGradient} rounded-t-2xl relative overflow-hidden flex-shrink-0`}>
         <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         <div className="absolute bottom-4 left-4 text-white">
           <svg className="h-12 w-12" fill="currentColor" viewBox="0 0 24 24">
@@ -47,14 +47,14 @@ export default function SolutionCard({
         </div>
       </div>
       
-      <div className="p-8">
+      <div className="p-8 flex flex-col flex-grow">
         <h3 className="text-2xl font-bold text-exl-midnight mb-4">{title}</h3>
-        <p className="text-exl-slate mb-6 leading-relaxed">
+        <p className="text-exl-slate mb-6 leading-relaxed flex-grow">
           {description}
         </p>
         
         {/* Action Links */}
-        <div className="space-y-3">
+        <div className="space-y-3 mt-auto">
           <button 
             onClick={handleDemoClick}
             className="flex items-center justify-center bg-exl-orange text-white px-6 py-3 rounded-lg font-medium hover:bg-orange-600 transition-colors duration-200 w-full"

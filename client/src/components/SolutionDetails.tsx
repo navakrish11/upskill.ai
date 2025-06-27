@@ -32,7 +32,7 @@ export default function SolutionDetails({
   const [isExpanded, setIsExpanded] = useState(true);
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200 mt-4">
+    <div className="bg-white rounded-lg shadow-sm border border-gray-200 mt-4 flex-grow">
       <button
         onClick={() => setIsExpanded(!isExpanded)}
         className="w-full flex items-center justify-between p-3 hover:bg-gray-50 transition-colors duration-200"
