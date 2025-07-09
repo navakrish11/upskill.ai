@@ -36,13 +36,6 @@ export default function HeroSection({ onVideoOpen }: HeroSectionProps) {
             >
               Get Started
             </Button>
-            <Button 
-              onClick={handleWatchDemo}
-              variant="outline"
-              className="bg-white text-exl-midnight px-8 py-4 rounded-lg font-semibold text-lg border-2 border-exl-midnight hover:bg-exl-midnight hover:text-white transition-all duration-200"
-            >
-              Watch Demo
-            </Button>
           </div>
         </div>
       </div>
