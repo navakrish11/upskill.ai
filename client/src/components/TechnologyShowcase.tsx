@@ -1,33 +1,59 @@
-import { Brain, BarChart3, Trophy, Shield } from "lucide-react";
+import { useState } from "react";
+import { Clock, TrendingUp, Users, Cloud, Mic, Database, Gamepad2 } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-const technologyFeatures = [
+const businessValueItems = [
   {
-    icon: Brain,
-    title: "Intelligent AI Avatars",
-    description: "Dynamic virtual trainers that adapt to learning styles",
-    bgColor: "bg-exl-orange bg-opacity-10",
-    iconColor: "text-exl-orange"
-  },
-  {
-    icon: BarChart3,
-    title: "Real-time Analytics",
-    description: "Performance tracking and sentiment analysis",
-    bgColor: "bg-exl-midnight bg-opacity-10",
-    iconColor: "text-exl-midnight"
-  },
-  {
-    icon: Trophy,
-    title: "Gamified Learning",
-    description: "Achievement systems and competitive elements",
-    bgColor: "bg-green-500 bg-opacity-10",
-    iconColor: "text-green-600"
-  },
-  {
-    icon: Shield,
-    title: "Safe Environment",
-    description: "Risk-free practice with realistic scenarios",
-    bgColor: "bg-blue-500 bg-opacity-10",
+    icon: Clock,
+    title: "30-50%",
+    subtitle: "Faster training cycles",
+    bgColor: "bg-blue-100",
     iconColor: "text-blue-600"
+  },
+  {
+    icon: TrendingUp,
+    title: "Up to 40%",
+    subtitle: "Engagement lift through gamification",
+    bgColor: "bg-orange-100",
+    iconColor: "text-orange-600"
+  },
+  {
+    icon: Users,
+    title: "25%",
+    subtitle: "Reduction in ramp-up attrition",
+    bgColor: "bg-blue-100",
+    iconColor: "text-blue-600"
+  }
+];
+
+const techInfrastructureItems = [
+  {
+    icon: Cloud,
+    title: "Cloud Infrastructure",
+    items: ["Microservices on AWS", "Auto-scaling containers", "Multi-region deployment"],
+    bgColor: "bg-blue-100",
+    iconColor: "text-blue-600"
+  },
+  {
+    icon: Mic,
+    title: "AI Voice Engine",
+    items: ["WebRTC + Azure AI", "Real-time voice processing", "Natural language understanding"],
+    bgColor: "bg-orange-100",
+    iconColor: "text-orange-600"
+  },
+  {
+    icon: Database,
+    title: "Data Management",
+    items: ["Secure blob-based content sync", "MongoDB Atlas clusters", "Redis caching layer"],
+    bgColor: "bg-blue-100",
+    iconColor: "text-blue-600"
+  },
+  {
+    icon: Gamepad2,
+    title: "Gamification Engine",
+    items: ["Real-time leaderboards", "Socket.IO for live updates", "Achievement tracking system"],
+    bgColor: "bg-orange-100",
+    iconColor: "text-orange-600"
   }
 ];
 
@@ -37,28 +63,62 @@ export default function TechnologyShowcase() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-exl-midnight mb-4">
-            Powered by Advanced AI Technology
+            Technology Backbone - What Powers Us
           </h2>
           <p className="text-lg text-exl-slate max-w-3xl mx-auto">
-            Our platform leverages cutting-edge artificial intelligence to create immersive, personalized learning experiences that adapt to each user's needs.
+            Our platform is built on robust infrastructure delivering measurable business value through cutting-edge technology.
           </p>
         </div>
         
-        {/* Technology Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {technologyFeatures.map((feature, index) => {
-            const IconComponent = feature.icon;
-            return (
-              <div key={index} className="text-center bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200">
-                <div className={`w-16 h-16 ${feature.bgColor} rounded-lg flex items-center justify-center mx-auto mb-4`}>
-                  <IconComponent className={`h-8 w-8 ${feature.iconColor}`} />
-                </div>
-                <h3 className="font-semibold text-exl-midnight mb-2">{feature.title}</h3>
-                <p className="text-sm text-exl-slate">{feature.description}</p>
-              </div>
-            );
-          })}
-        </div>
+        <Tabs defaultValue="business" className="w-full">
+          <TabsList className="grid w-full grid-cols-2 mb-12">
+            <TabsTrigger value="business" className="text-lg py-3">Business Value (For Leaders)</TabsTrigger>
+            <TabsTrigger value="tech" className="text-lg py-3">Tech Infrastructure (For Developers)</TabsTrigger>
+          </TabsList>
+          
+          <TabsContent value="business" className="space-y-8">
+            <div className="grid md:grid-cols-3 gap-8">
+              {businessValueItems.map((item, index) => {
+                const IconComponent = item.icon;
+                return (
+                  <div key={index} className="text-center bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200">
+                    <div className={`w-16 h-16 ${item.bgColor} rounded-lg flex items-center justify-center mx-auto mb-4`}>
+                      <IconComponent className={`h-8 w-8 ${item.iconColor}`} />
+                    </div>
+                    <h3 className="text-2xl font-bold text-exl-midnight mb-2">{item.title}</h3>
+                    <p className="text-sm text-exl-slate">{item.subtitle}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </TabsContent>
+          
+          <TabsContent value="tech" className="space-y-8">
+            <div className="grid md:grid-cols-2 gap-8">
+              {techInfrastructureItems.map((item, index) => {
+                const IconComponent = item.icon;
+                return (
+                  <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200">
+                    <div className="flex items-center mb-6">
+                      <div className={`w-12 h-12 ${item.bgColor} rounded-lg flex items-center justify-center mr-4`}>
+                        <IconComponent className={`h-6 w-6 ${item.iconColor}`} />
+                      </div>
+                      <h3 className="text-xl font-semibold text-exl-midnight">{item.title}</h3>
+                    </div>
+                    <ul className="space-y-2">
+                      {item.items.map((listItem, itemIndex) => (
+                        <li key={itemIndex} className="flex items-center text-sm text-exl-slate">
+                          <span className="w-2 h-2 bg-exl-orange rounded-full mr-3"></span>
+                          {listItem}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              })}
+            </div>
+          </TabsContent>
+        </Tabs>
       </div>
     </section>
   );
