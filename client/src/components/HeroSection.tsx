@@ -25,7 +25,7 @@ export default function HeroSection({ onVideoOpen }: HeroSectionProps) {
             <span className="text-exl-orange">EXL's AI Training Suite</span>
           </h1>
           <p className="text-xl text-exl-slate leading-relaxed mb-8 max-w-3xl mx-auto">
-            Upskill.AI is EXL's flagship initiative transforming new hire and lateral training through cutting-edge AI, gamification, and simulation technologies. Solve critical challenges like prolonged time-to-proficiency and low engagement.
+            Upskill.AI is EXL's flagship initiative transforming new hire and lateral training through cutting-edge AI, gamification, and simulation technologies. A unified platform accelerating time-to-proficiency through intelligent avatars, real-life simulations, and competitive learning journeys.
           </p>
           
           {/* Key benefits badges */}
