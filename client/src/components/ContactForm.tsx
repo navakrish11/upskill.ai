@@ -74,7 +74,7 @@ export default function ContactForm() {
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
             Ready to Transform Your Training?
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl max-w-3xl mx-auto text-[#3e4a4a]">
             See Upskill.AI in action. Book a personalized demo and discover how AI can accelerate your team's learning journey.
           </p>
         </div>
