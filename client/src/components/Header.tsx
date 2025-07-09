@@ -16,10 +16,24 @@ export default function Header() {
     setMobileMenuOpen(false);
   };
 
+  const scrollToCardAndFlip = (cardId: string) => {
+    // First scroll to the card
+    scrollToSection(cardId);
+    
+    // Then trigger the flip event after a short delay to ensure scrolling has started
+    setTimeout(() => {
+      const flipEvent = new CustomEvent('flipCard', {
+        detail: { cardId }
+      });
+      window.dispatchEvent(flipEvent);
+    }, 500);
+    setMobileMenuOpen(false);
+  };
+
   return (
     <header className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex items-center py-4">
           {/* EXL Logo */}
           <div className="flex items-center space-x-3">
             <img 
@@ -32,21 +46,21 @@ export default function Header() {
           </div>
           
           {/* Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-8 ml-auto">
             <button 
-              onClick={() => scrollToSection("ai-trainer")}
+              onClick={() => scrollToCardAndFlip("ai-trainer")}
               className="text-exl-slate hover:text-exl-orange transition-colors duration-200"
             >
               AI Trainer
             </button>
             <button 
-              onClick={() => scrollToSection("miai-simulator")}
+              onClick={() => scrollToCardAndFlip("miai-simulator")}
               className="text-exl-slate hover:text-exl-orange transition-colors duration-200"
             >
               MiAI Simulator
             </button>
             <button 
-              onClick={() => scrollToSection("gamification")}
+              onClick={() => scrollToCardAndFlip("gamification")}
               className="text-exl-slate hover:text-exl-orange transition-colors duration-200"
             >
               Gamification
@@ -60,10 +74,10 @@ export default function Header() {
           </nav>
           
           {/* Mobile menu button */}
-          <div className="flex items-center">
+          <div className="flex items-center ml-auto md:hidden">
             <button 
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 rounded-md text-exl-slate hover:text-exl-orange"
+              className="p-2 rounded-md text-exl-slate hover:text-exl-orange"
             >
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -74,19 +88,19 @@ export default function Header() {
         {mobileMenuOpen && (
           <div className="md:hidden bg-white border-t border-gray-100 px-4 py-4 space-y-4">
             <button 
-              onClick={() => scrollToSection("ai-trainer")}
+              onClick={() => scrollToCardAndFlip("ai-trainer")}
               className="block text-exl-slate hover:text-exl-orange transition-colors duration-200"
             >
               AI Trainer
             </button>
             <button 
-              onClick={() => scrollToSection("miai-simulator")}
+              onClick={() => scrollToCardAndFlip("miai-simulator")}
               className="block text-exl-slate hover:text-exl-orange transition-colors duration-200"
             >
               MiAI Simulator
             </button>
             <button 
-              onClick={() => scrollToSection("gamification")}
+              onClick={() => scrollToCardAndFlip("gamification")}
               className="block text-exl-slate hover:text-exl-orange transition-colors duration-200"
             >
               Gamification
