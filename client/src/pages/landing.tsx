@@ -4,7 +4,6 @@ import HeroSection from "@/components/HeroSection";
 import SolutionCard from "@/components/SolutionCard";
 import SolutionDetails from "@/components/SolutionDetails";
 import TechnologyShowcase from "@/components/TechnologyShowcase";
-import CallToAction from "@/components/CallToAction";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import VideoModal from "@/components/VideoModal";
@@ -160,7 +159,6 @@ export default function Landing() {
       </section>
 
       <TechnologyShowcase />
-      <CallToAction />
       <ContactForm />
       <Footer />
       
