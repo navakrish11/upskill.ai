@@ -54,12 +54,32 @@ export default function FlippableSolutionCard({
       if (event.detail.cardId === id) {
         setIsFlipped(true);
         setActiveTab("tech"); // Reset to tech tab when flipping from external source
+      } else {
+        // Reset this card to front view if another card is being flipped
+        setIsFlipped(false);
+      }
+    };
+
+    const handleResetAllCards = () => {
+      setIsFlipped(false);
+    };
+
+    const handleDocumentClick = (event: MouseEvent) => {
+      const cardElement = document.getElementById(id);
+      if (cardElement && !cardElement.contains(event.target as Node)) {
+        // Clicked outside this card, reset it to front view
+        setIsFlipped(false);
       }
     };
 
     window.addEventListener('flipCard', handleFlipCard as EventListener);
+    window.addEventListener('resetAllCards', handleResetAllCards as EventListener);
+    document.addEventListener('click', handleDocumentClick);
+    
     return () => {
       window.removeEventListener('flipCard', handleFlipCard as EventListener);
+      window.removeEventListener('resetAllCards', handleResetAllCards as EventListener);
+      document.removeEventListener('click', handleDocumentClick);
     };
   }, [id]);
 
@@ -68,7 +88,16 @@ export default function FlippableSolutionCard({
   };
 
   const handleCardClick = () => {
-    setIsFlipped(!isFlipped);
+    if (!isFlipped) {
+      // If flipping this card to show details, reset all other cards
+      const flipEvent = new CustomEvent('flipCard', {
+        detail: { cardId: id }
+      });
+      window.dispatchEvent(flipEvent);
+    } else {
+      // If flipping back to front, just set this card to front
+      setIsFlipped(false);
+    }
   };
 
   const handleBackClick = (e: React.MouseEvent) => {
@@ -82,7 +111,10 @@ export default function FlippableSolutionCard({
         className={`absolute inset-0 w-full h-full transition-transform duration-700 transform-style-preserve-3d cursor-pointer ${
           isFlipped ? 'rotate-y-180' : ''
         }`}
-        onClick={handleCardClick}
+        onClick={(e) => {
+          e.stopPropagation();
+          handleCardClick();
+        }}
       >
         {/* Front of Card */}
         <div className="absolute inset-0 w-full h-full backface-hidden">
