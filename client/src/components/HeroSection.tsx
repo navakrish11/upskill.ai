@@ -21,8 +21,8 @@ export default function HeroSection({ onVideoOpen }: HeroSectionProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-4xl lg:text-6xl font-bold text-exl-midnight leading-tight mb-6">
-            Revolutionize Training with{" "}
-            <span className="text-exl-orange">AI-Powered</span> Learning
+            Reimagine Learning & Readiness with{" "}
+            <span className="text-exl-orange">EXL's AI Training Suite</span>
           </h1>
           <p className="text-xl text-exl-slate leading-relaxed mb-8 max-w-3xl mx-auto">
             Upskill.AI is EXL's flagship initiative transforming new hire and lateral training through cutting-edge AI, gamification, and simulation technologies. Solve critical challenges like prolonged time-to-proficiency and low engagement.
