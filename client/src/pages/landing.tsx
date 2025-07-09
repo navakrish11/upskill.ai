@@ -1,8 +1,7 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import SolutionCard from "@/components/SolutionCard";
-import SolutionDetails from "@/components/SolutionDetails";
+import FlippableSolutionCard from "@/components/FlippableSolutionCard";
 import TechnologyShowcase from "@/components/TechnologyShowcase";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
@@ -140,19 +139,11 @@ export default function Landing() {
           {/* Solutions Grid */}
           <div className="grid md:grid-cols-3 gap-8 lg:gap-12 items-start">
             {solutions.map((solution) => (
-              <div key={solution.id} className="flex flex-col h-full">
-                <SolutionCard 
-                  {...solution} 
-                  onVideoOpen={handleVideoOpen}
-                />
-                <SolutionDetails
-                  id={solution.id}
-                  title={solution.title}
-                  techDetails={solution.techDetails}
-                  productTeam={solution.productTeam}
-                  functionalTeam={solution.functionalTeam}
-                />
-              </div>
+              <FlippableSolutionCard 
+                key={solution.id}
+                {...solution} 
+                onVideoOpen={handleVideoOpen}
+              />
             ))}
           </div>
         </div>
