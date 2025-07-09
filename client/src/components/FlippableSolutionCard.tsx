@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Play, Users, Code, Settings, ArrowLeft } from "lucide-react";
 
 interface FlippableSolutionCardProps {
@@ -49,6 +49,20 @@ export default function FlippableSolutionCard({
   const [isFlipped, setIsFlipped] = useState(false);
   const [activeTab, setActiveTab] = useState("tech");
 
+  useEffect(() => {
+    const handleFlipCard = (event: CustomEvent) => {
+      if (event.detail.cardId === id) {
+        setIsFlipped(true);
+        setActiveTab("tech"); // Reset to tech tab when flipping from external source
+      }
+    };
+
+    window.addEventListener('flipCard', handleFlipCard as EventListener);
+    return () => {
+      window.removeEventListener('flipCard', handleFlipCard as EventListener);
+    };
+  }, [id]);
+
   const handleDemoClick = () => {
     onVideoOpen(videoSrc, title);
   };
@@ -63,7 +77,7 @@ export default function FlippableSolutionCard({
   };
 
   return (
-    <div className="relative h-[500px] w-full perspective-1000">
+    <div id={id} className="relative h-[500px] w-full perspective-1000">
       <div
         className={`absolute inset-0 w-full h-full transition-transform duration-700 transform-style-preserve-3d cursor-pointer ${
           isFlipped ? 'rotate-y-180' : ''

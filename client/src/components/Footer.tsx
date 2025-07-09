@@ -12,6 +12,19 @@ export default function Footer() {
     }
   };
 
+  const scrollToCardAndFlip = (cardId: string) => {
+    // First scroll to the card
+    scrollToSection(cardId);
+    
+    // Then trigger the flip event after a short delay to ensure scrolling has started
+    setTimeout(() => {
+      const flipEvent = new CustomEvent('flipCard', {
+        detail: { cardId }
+      });
+      window.dispatchEvent(flipEvent);
+    }, 500);
+  };
+
   return (
     <footer id="contact" className="bg-gray-900 text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -59,7 +72,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li>
                 <button 
-                  onClick={() => scrollToSection("ai-trainer")}
+                  onClick={() => scrollToCardAndFlip("ai-trainer")}
                   className="text-gray-300 hover:text-exl-orange transition-colors duration-200"
                 >
                   AI Trainer
@@ -67,7 +80,7 @@ export default function Footer() {
               </li>
               <li>
                 <button 
-                  onClick={() => scrollToSection("miai-simulator")}
+                  onClick={() => scrollToCardAndFlip("miai-simulator")}
                   className="text-gray-300 hover:text-exl-orange transition-colors duration-200"
                 >
                   MiAI Call Simulator
@@ -75,7 +88,7 @@ export default function Footer() {
               </li>
               <li>
                 <button 
-                  onClick={() => scrollToSection("gamification")}
+                  onClick={() => scrollToCardAndFlip("gamification")}
                   className="text-gray-300 hover:text-exl-orange transition-colors duration-200"
                 >
                   Gamification
