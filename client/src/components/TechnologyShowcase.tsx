@@ -43,8 +43,8 @@ const techInfrastructureItems = [
   },
   {
     icon: Mic,
-    title: "Interactive Avatar and Digital Twin",
-    items: ["WebRTC + Azure AI", "Real-time voice processing", "Interactive avatar and digital twin"],
+    title: "AI Voice Engine",
+    items: ["WebRTC + Azure AI", "Real-time voice processing", "Natural language understanding"],
     bgColor: "bg-orange-100",
     iconColor: "text-orange-600"
   },
