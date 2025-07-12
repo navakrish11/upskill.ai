@@ -178,25 +178,22 @@ export default function FlippableSolutionCard({
             <div className="p-4 flex-grow overflow-hidden">
               <div className="space-y-3">
                 {id === "ai-trainer" ? (
-                  <div>
-                    <h5 className="font-semibold text-exl-midnight mb-3">AI Trainer Highlights</h5>
-                    <div className="space-y-2">
-                      <div className="flex items-start">
-                        <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
-                        <p className="text-xs text-exl-slate">AI driven personalization for smarter learning</p>
-                      </div>
-                      <div className="flex items-start">
-                        <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
-                        <p className="text-xs text-exl-slate">Seamless experience across web & mobile</p>
-                      </div>
-                      <div className="flex items-start">
-                        <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
-                        <p className="text-xs text-exl-slate">Real-time avatar-based interactions</p>
-                      </div>
-                      <div className="flex items-start">
-                        <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
-                        <p className="text-xs text-exl-slate">Scalable, cloud-native performance</p>
-                      </div>
+                  <div className="space-y-2">
+                    <div className="flex items-start">
+                      <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
+                      <p className="text-xs text-exl-slate leading-relaxed">AI driven personalization for smarter learning</p>
+                    </div>
+                    <div className="flex items-start">
+                      <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
+                      <p className="text-xs text-exl-slate leading-relaxed">Seamless experience across web & mobile</p>
+                    </div>
+                    <div className="flex items-start">
+                      <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
+                      <p className="text-xs text-exl-slate leading-relaxed">Real-time avatar-based interactions</p>
+                    </div>
+                    <div className="flex items-start">
+                      <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
+                      <p className="text-xs text-exl-slate leading-relaxed">Scalable, cloud-native performance</p>
                     </div>
                   </div>
                 ) : (
