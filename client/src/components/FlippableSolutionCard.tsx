@@ -190,7 +190,7 @@ export default function FlippableSolutionCard({
                       "Scalable, cloud-native performance"
                     ].map((highlight, index) => (
                       <div key={index} className="flex items-start group">
-                        <div className="w-3 h-3 bg-gradient-to-r from-exl-orange to-orange-500 rounded-full mt-1.5 mr-4 flex-shrink-0 shadow-sm group-hover:shadow-md transition-shadow"></div>
+                        <div className="w-2 h-2 bg-exl-midnight rounded-full mt-2 mr-3 flex-shrink-0"></div>
                         <p className="text-sm text-exl-slate leading-relaxed font-medium group-hover:text-exl-midnight transition-colors">
                           {highlight}
                         </p>
@@ -206,7 +206,7 @@ export default function FlippableSolutionCard({
                       "Secure, scalable cloud-based deployment"
                     ].map((highlight, index) => (
                       <div key={index} className="flex items-start group">
-                        <div className="w-3 h-3 bg-gradient-to-r from-exl-orange to-orange-500 rounded-full mt-1.5 mr-4 flex-shrink-0 shadow-sm group-hover:shadow-md transition-shadow"></div>
+                        <div className="w-2 h-2 bg-exl-midnight rounded-full mt-2 mr-3 flex-shrink-0"></div>
                         <p className="text-sm text-exl-slate leading-relaxed font-medium group-hover:text-exl-midnight transition-colors">
                           {highlight}
                         </p>
@@ -222,7 +222,7 @@ export default function FlippableSolutionCard({
                       "Scalable cloud infrastructure for live performance"
                     ].map((highlight, index) => (
                       <div key={index} className="flex items-start group">
-                        <div className="w-3 h-3 bg-gradient-to-r from-exl-orange to-orange-500 rounded-full mt-1.5 mr-4 flex-shrink-0 shadow-sm group-hover:shadow-md transition-shadow"></div>
+                        <div className="w-2 h-2 bg-exl-midnight rounded-full mt-2 mr-3 flex-shrink-0"></div>
                         <p className="text-sm text-exl-slate leading-relaxed font-medium group-hover:text-exl-midnight transition-colors">
                           {highlight}
                         </p>
@@ -230,6 +230,14 @@ export default function FlippableSolutionCard({
                     ))}
                   </div>
                 )}
+              </div>
+            </div>
+            
+            {/* Bottom colored section matching header */}
+            <div className={`h-16 bg-gradient-to-br ${bgGradient} rounded-b-2xl relative overflow-hidden`}>
+              <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-8 h-1 bg-white/30 rounded-full"></div>
               </div>
             </div>
           </div>
