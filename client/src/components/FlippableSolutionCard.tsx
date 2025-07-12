@@ -52,32 +52,13 @@ export default function FlippableSolutionCard({
     const handleFlipCard = (event: CustomEvent) => {
       if (event.detail.cardId === id) {
         setIsFlipped(true);
-      } else {
-        // Reset this card to front view if another card is being flipped
-        setIsFlipped(false);
-      }
-    };
-
-    const handleResetAllCards = () => {
-      setIsFlipped(false);
-    };
-
-    const handleDocumentClick = (event: MouseEvent) => {
-      const cardElement = document.getElementById(id);
-      if (cardElement && !cardElement.contains(event.target as Node)) {
-        // Clicked outside this card, reset it to front view
-        setIsFlipped(false);
       }
     };
 
     window.addEventListener('flipCard', handleFlipCard as EventListener);
-    window.addEventListener('resetAllCards', handleResetAllCards as EventListener);
-    document.addEventListener('click', handleDocumentClick);
     
     return () => {
       window.removeEventListener('flipCard', handleFlipCard as EventListener);
-      window.removeEventListener('resetAllCards', handleResetAllCards as EventListener);
-      document.removeEventListener('click', handleDocumentClick);
     };
   }, [id]);
 
@@ -87,7 +68,7 @@ export default function FlippableSolutionCard({
 
   const handleCardClick = () => {
     if (!isFlipped) {
-      // If flipping this card to show details, reset all other cards
+      // Flip this card to show details
       const flipEvent = new CustomEvent('flipCard', {
         detail: { cardId: id }
       });
