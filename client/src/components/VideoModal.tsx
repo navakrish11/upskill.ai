@@ -1,4 +1,4 @@
-import { X } from "lucide-react";
+import { X, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface VideoModalProps {
@@ -10,6 +10,9 @@ interface VideoModalProps {
 
 export default function VideoModal({ isOpen, onClose, videoSrc, title }: VideoModalProps) {
   if (!isOpen) return null;
+
+  // Check if this is a coming soon demo
+  const isComingSoon = videoSrc.includes("miai-call-demo") || videoSrc.includes("gamification-demo");
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
@@ -28,16 +31,31 @@ export default function VideoModal({ isOpen, onClose, videoSrc, title }: VideoMo
         </div>
         
         {/* Video Content */}
-        <div className="aspect-video bg-black">
-          <video
-            src={videoSrc}
-            controls
-            className="w-full h-full"
-            autoPlay
-            playsInline
-          >
-            Your browser does not support the video tag.
-          </video>
+        <div className="aspect-video bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center">
+          {isComingSoon ? (
+            <div className="text-center text-white p-8">
+              <div className="w-16 h-16 bg-exl-orange rounded-full flex items-center justify-center mx-auto mb-4">
+                <Clock className="h-8 w-8 text-white" />
+              </div>
+              <h2 className="text-3xl font-bold mb-4">Coming Soon</h2>
+              <p className="text-lg text-gray-300 mb-6">
+                We're working hard to bring you an amazing demo experience.
+              </p>
+              <p className="text-sm text-gray-400">
+                Stay tuned for updates on this exciting feature!
+              </p>
+            </div>
+          ) : (
+            <video
+              src={videoSrc}
+              controls
+              className="w-full h-full"
+              autoPlay
+              playsInline
+            >
+              Your browser does not support the video tag.
+            </video>
+          )}
         </div>
         
         {/* Modal Footer */}

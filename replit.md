@@ -116,6 +116,7 @@ Changelog:
 - July 12, 2025. Updated AI Trainer technology from "Blob" to "Blog Blob Storage"
 - July 12, 2025. Reordered AI Trainer technologies to: React Native, Next.js, GPT-4o, Langchain, Blob Storage, Node.js
 - July 12, 2025. Created Coming Soon page for Gamification feature and updated navigation to redirect there
+- July 12, 2025. Modified VideoModal to show "Coming Soon" message for MiAI Call Simulator and Gamification Experience demos
 
 ## User Preferences
 
