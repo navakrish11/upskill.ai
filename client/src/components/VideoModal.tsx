@@ -54,6 +54,12 @@ export default function VideoModal({ isOpen, onClose, videoSrc, title }: VideoMo
                 preload="metadata"
                 playsInline
                 controlsList="nodownload"
+                onError={(e) => {
+                  console.error("Video loading error:", e);
+                  console.log("Attempting to load video from:", videoSrc);
+                }}
+                onLoadStart={() => console.log("Video loading started for:", videoSrc)}
+                onCanPlay={() => console.log("Video can play:", videoSrc)}
               >
                 <source src={videoSrc} type="video/mp4" />
                 Your browser does not support the video tag.
