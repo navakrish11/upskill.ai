@@ -17,7 +17,7 @@ export default function HeroSection({ onVideoOpen }: HeroSectionProps) {
   };
 
   return (
-    <section className="bg-gradient-to-br from-exl-light to-white py-8 lg:py-12">
+    <section className="bg-gradient-to-br from-exl-light to-white py-6 lg:py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-4xl mx-auto">
           <div className="mb-4">
@@ -70,16 +70,7 @@ export default function HeroSection({ onVideoOpen }: HeroSectionProps) {
             </svg>
           </div>
 
-          
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Button 
-              onClick={handleGetStarted}
-              className="bg-exl-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-all duration-200 transform hover:scale-105"
-            >
-              Get Started
-            </Button>
-          </div>
+
         </div>
       </div>
     </section>
