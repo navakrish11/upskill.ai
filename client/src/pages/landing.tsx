@@ -130,7 +130,7 @@ export default function Landing() {
           {/* Section Header */}
           <div className="text-center mb-6">
             <h2 className="text-2xl lg:text-3xl font-bold text-exl-midnight mb-2">
-              Three Core AI Solutions
+              Flagship AI Solutions
             </h2>
             <p className="text-base text-exl-slate max-w-3xl mx-auto">
               Our platform is anchored on three innovative solutions designed to transform how organizations approach training and development.
