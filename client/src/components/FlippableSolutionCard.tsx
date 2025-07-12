@@ -85,7 +85,7 @@ export default function FlippableSolutionCard({
   };
 
   return (
-    <div id={id} className="relative h-[500px] w-full perspective-1000">
+    <div id={id} className="relative h-[380px] w-full perspective-1000">
       <div
         className={`absolute inset-0 w-full h-full transition-transform duration-700 transform-style-preserve-3d cursor-pointer ${
           isFlipped ? 'rotate-y-180' : ''
@@ -99,7 +99,7 @@ export default function FlippableSolutionCard({
         <div className="absolute inset-0 w-full h-full backface-hidden">
           <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 h-full flex flex-col">
             {/* Solution visual representation */}
-            <div className={`h-48 bg-gradient-to-br ${bgGradient} rounded-t-2xl relative overflow-hidden flex-shrink-0`}>
+            <div className={`h-32 bg-gradient-to-br ${bgGradient} rounded-t-2xl relative overflow-hidden flex-shrink-0`}>
               <div className="absolute inset-0 bg-black bg-opacity-20"></div>
               <div className="absolute bottom-4 left-4 text-white">
                 <svg className="h-12 w-12" fill="currentColor" viewBox="0 0 24 24">
@@ -111,22 +111,22 @@ export default function FlippableSolutionCard({
               </div>
             </div>
             
-            <div className="p-6 flex flex-col flex-grow">
-              <h3 className="text-xl font-bold text-exl-midnight mb-4">{title}</h3>
-              <div className="h-28 overflow-hidden mb-6">
-                <p className="text-sm text-exl-slate leading-relaxed">
+            <div className="p-4 flex flex-col flex-grow">
+              <h3 className="text-lg font-bold text-exl-midnight mb-3">{title}</h3>
+              <div className="h-20 overflow-hidden mb-4">
+                <p className="text-sm text-exl-slate leading-snug">
                   {description}
                 </p>
               </div>
               
               {/* Action Links */}
-              <div className="space-y-4 mt-auto">
+              <div className="space-y-3 mt-auto">
                 <button 
                   onClick={(e) => {
                     e.stopPropagation();
                     handleDemoClick();
                   }}
-                  className="flex items-center justify-center bg-exl-orange text-white px-5 py-2.5 rounded-lg font-medium hover:bg-orange-600 transition-colors duration-200 w-full"
+                  className="flex items-center justify-center bg-exl-orange text-white px-4 py-2 rounded-lg font-medium hover:bg-orange-600 transition-colors duration-200 w-full text-sm"
                 >
                   <Play className="h-5 w-5 mr-2 fill-current" />
                   View Demo
@@ -139,13 +139,13 @@ export default function FlippableSolutionCard({
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={(e) => e.stopPropagation()}
-                    className="flex items-center justify-center bg-blue-600 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200 w-full"
+                    className="flex items-center justify-center bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200 w-full text-sm"
                   >
                     <ExternalLink className="h-5 w-5 mr-2" />
                     Launch Application
                   </a>
                 ) : (
-                  <div className="flex items-center justify-center bg-gray-100 text-gray-600 px-5 py-2.5 rounded-lg font-medium w-full">
+                  <div className="flex items-center justify-center bg-gray-100 text-gray-600 px-4 py-2 rounded-lg font-medium w-full text-sm">
                     <Clock className="h-5 w-5 mr-2" />
                     Coming Soon
                   </div>
