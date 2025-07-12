@@ -15,7 +15,7 @@ const solutions = [
     bgGradient: "from-[hsl(14,96%,51%)] to-orange-400",
     iconPath: "M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1H9V3H15.5L21 8.5V21C21 22.1 20.1 23 19 23H5C3.9 23 3 22.1 3 21V3C3 1.9 3.9 1 5 1H7V3H5V21H19V9H21ZM12 8C14.2 8 16 9.8 16 12S14.2 16 12 16S8 14.2 8 12S9.8 8 12 8Z",
     demoLink: "https://example.com/ai-trainer-demo",
-    videoSrc: "/videos/ai-trainer-demo.mp4",
+    videoSrc: "/attached_assets/Introduction to AI Trainer_1752322156290.mp4",
     techLink: "https://example.com/ai-trainer-tech",
     productLink: "https://example.com/ai-trainer-product",
     functionalLink: "https://example.com/ai-trainer-functional",
