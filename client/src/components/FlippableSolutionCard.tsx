@@ -176,65 +176,124 @@ export default function FlippableSolutionCard({
 
             {/* Content based on card type */}
             <div className="p-4 flex-grow overflow-hidden">
-              <div className="space-y-3">
-                {id === "ai-trainer" ? (
+              <div className="space-y-4">
+                {/* Key Highlights Section */}
+                <div>
+                  <h5 className="font-semibold text-exl-midnight mb-3 text-sm">Key Highlights</h5>
                   <div className="space-y-2">
-                    <div className="flex items-start">
-                      <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
-                      <p className="text-xs text-exl-slate leading-relaxed">AI driven personalization for smarter learning</p>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
-                      <p className="text-xs text-exl-slate leading-relaxed">Seamless experience across web & mobile</p>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
-                      <p className="text-xs text-exl-slate leading-relaxed">Real-time avatar-based interactions</p>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
-                      <p className="text-xs text-exl-slate leading-relaxed">Scalable, cloud-native performance</p>
-                    </div>
+                    {id === "ai-trainer" ? (
+                      <>
+                        <div className="flex items-start">
+                          <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
+                          <p className="text-xs text-exl-slate leading-relaxed">AI driven personalization for smarter learning</p>
+                        </div>
+                        <div className="flex items-start">
+                          <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
+                          <p className="text-xs text-exl-slate leading-relaxed">Seamless experience across web & mobile</p>
+                        </div>
+                        <div className="flex items-start">
+                          <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
+                          <p className="text-xs text-exl-slate leading-relaxed">Real-time avatar-based interactions</p>
+                        </div>
+                        <div className="flex items-start">
+                          <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
+                          <p className="text-xs text-exl-slate leading-relaxed">Scalable, cloud-native performance</p>
+                        </div>
+                      </>
+                    ) : id === "miai-simulator" ? (
+                      <>
+                        <div className="flex items-start">
+                          <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
+                          <p className="text-xs text-exl-slate leading-relaxed">Real-time simulation of customer conversations</p>
+                        </div>
+                        <div className="flex items-start">
+                          <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
+                          <p className="text-xs text-exl-slate leading-relaxed">AI-powered sentiment and speech analysis</p>
+                        </div>
+                        <div className="flex items-start">
+                          <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
+                          <p className="text-xs text-exl-slate leading-relaxed">Instant feedback and adaptive learning</p>
+                        </div>
+                        <div className="flex items-start">
+                          <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
+                          <p className="text-xs text-exl-slate leading-relaxed">Secure, scalable cloud-based deployment</p>
+                        </div>
+                      </>
+                    ) : (
+                      <>
+                        <div className="flex items-start">
+                          <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
+                          <p className="text-xs text-exl-slate leading-relaxed">Real-time scoring and interactive achievements</p>
+                        </div>
+                        <div className="flex items-start">
+                          <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
+                          <p className="text-xs text-exl-slate leading-relaxed">Blockchain-backed digital certifications</p>
+                        </div>
+                        <div className="flex items-start">
+                          <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
+                          <p className="text-xs text-exl-slate leading-relaxed">Multiplayer-ready for global engagement</p>
+                        </div>
+                        <div className="flex items-start">
+                          <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
+                          <p className="text-xs text-exl-slate leading-relaxed">Scalable cloud infrastructure for live performance</p>
+                        </div>
+                      </>
+                    )}
                   </div>
-                ) : id === "miai-simulator" ? (
-                  <div className="space-y-2">
-                    <div className="flex items-start">
-                      <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
-                      <p className="text-xs text-exl-slate leading-relaxed">Real-time simulation of customer conversations</p>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
-                      <p className="text-xs text-exl-slate leading-relaxed">AI-powered sentiment and speech analysis</p>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
-                      <p className="text-xs text-exl-slate leading-relaxed">Instant feedback and adaptive learning</p>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
-                      <p className="text-xs text-exl-slate leading-relaxed">Secure, scalable cloud-based deployment</p>
-                    </div>
+                </div>
+
+                {/* Technology Stack Section */}
+                <div>
+                  <h5 className="font-semibold text-exl-midnight mb-2 text-sm">Technology Stack</h5>
+                  <div className="grid grid-cols-2 gap-1">
+                    {techDetails.technologies.map((tech, index) => (
+                      <div key={index} className="text-xs text-exl-slate bg-gray-50 px-2 py-1 rounded">
+                        {tech}
+                      </div>
+                    ))}
                   </div>
-                ) : (
-                  <div className="space-y-2">
-                    <div className="flex items-start">
-                      <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
-                      <p className="text-xs text-exl-slate leading-relaxed">Real-time scoring and interactive achievements</p>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
-                      <p className="text-xs text-exl-slate leading-relaxed">Blockchain-backed digital certifications</p>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
-                      <p className="text-xs text-exl-slate leading-relaxed">Multiplayer-ready for global engagement</p>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
-                      <p className="text-xs text-exl-slate leading-relaxed">Scalable cloud infrastructure for live performance</p>
-                    </div>
+                </div>
+
+                {/* Impact Metrics Section */}
+                <div>
+                  <h5 className="font-semibold text-exl-midnight mb-2 text-sm">Impact Metrics</h5>
+                  <div className="grid grid-cols-2 gap-2">
+                    {id === "ai-trainer" ? (
+                      <>
+                        <div className="bg-gradient-to-r from-exl-orange/10 to-exl-orange/5 p-2 rounded">
+                          <div className="text-lg font-bold text-exl-midnight">85%</div>
+                          <div className="text-xs text-exl-slate">Engagement Rate</div>
+                        </div>
+                        <div className="bg-gradient-to-r from-blue-100 to-blue-50 p-2 rounded">
+                          <div className="text-lg font-bold text-exl-midnight">40%</div>
+                          <div className="text-xs text-exl-slate">Faster Learning</div>
+                        </div>
+                      </>
+                    ) : id === "miai-simulator" ? (
+                      <>
+                        <div className="bg-gradient-to-r from-exl-orange/10 to-exl-orange/5 p-2 rounded">
+                          <div className="text-lg font-bold text-exl-midnight">92%</div>
+                          <div className="text-xs text-exl-slate">Accuracy Rate</div>
+                        </div>
+                        <div className="bg-gradient-to-r from-blue-100 to-blue-50 p-2 rounded">
+                          <div className="text-lg font-bold text-exl-midnight">60%</div>
+                          <div className="text-xs text-exl-slate">Skill Improvement</div>
+                        </div>
+                      </>
+                    ) : (
+                      <>
+                        <div className="bg-gradient-to-r from-exl-orange/10 to-exl-orange/5 p-2 rounded">
+                          <div className="text-lg font-bold text-exl-midnight">78%</div>
+                          <div className="text-xs text-exl-slate">Completion Rate</div>
+                        </div>
+                        <div className="bg-gradient-to-r from-blue-100 to-blue-50 p-2 rounded">
+                          <div className="text-lg font-bold text-exl-midnight">95%</div>
+                          <div className="text-xs text-exl-slate">User Satisfaction</div>
+                        </div>
+                      </>
+                    )}
                   </div>
-                )}
+                </div>
               </div>
             </div>
           </div>
