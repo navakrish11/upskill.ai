@@ -68,9 +68,7 @@ export default function HeroSection({ onVideoOpen }: HeroSectionProps) {
               <rect x="710" y="58" width="20" height="4" fill="url(#orangeGradient)" opacity="0.4" rx="2" />
             </svg>
           </div>
-          <p className="text-lg text-exl-slate leading-relaxed mb-6 max-w-3xl mx-auto">
-            Upskill.AI is EXL's flagship initiative transforming new hire and lateral training through cutting-edge AI, gamification, and simulation technologies. A unified platform accelerating time-to-proficiency through intelligent avatars, real-life simulations, and competitive learning journeys.
-          </p>
+
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
