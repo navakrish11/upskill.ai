@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Play, ArrowLeft } from "lucide-react";
+import { Play, ArrowLeft, ExternalLink, Clock } from "lucide-react";
 
 interface FlippableSolutionCardProps {
   id: string;
@@ -131,6 +131,25 @@ export default function FlippableSolutionCard({
                   <Play className="h-5 w-5 mr-2 fill-current" />
                   View Demo
                 </button>
+                
+                {/* Launch Application Button */}
+                {(id === "ai-trainer" || id === "miai-simulator") ? (
+                  <a 
+                    href={id === "ai-trainer" ? "https://agenticairi-app6.exlservice.com/" : "https://miaisimulatorapp.exlservice.com/"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="flex items-center justify-center bg-blue-600 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200 w-full"
+                  >
+                    <ExternalLink className="h-5 w-5 mr-2" />
+                    Launch Application
+                  </a>
+                ) : (
+                  <div className="flex items-center justify-center bg-gray-100 text-gray-600 px-5 py-2.5 rounded-lg font-medium w-full">
+                    <Clock className="h-5 w-5 mr-2" />
+                    Coming Soon
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -177,27 +196,7 @@ export default function FlippableSolutionCard({
                   <p className="text-xs text-exl-slate leading-relaxed">{techDetails.deployment}</p>
                 </div>
                 
-                {/* Launch Application Section */}
-                <div>
-                  <h5 className="font-semibold text-exl-midnight mb-2">Launch Application:</h5>
-                  <div className="space-y-2">
-                    {(id === "ai-trainer" || id === "miai-simulator") ? (
-                      <a 
-                        href={id === "ai-trainer" ? "https://agenticairi-app6.exlservice.com/" : "https://miaisimulatorapp.exlservice.com/"}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                        className="inline-block bg-exl-orange text-white px-3 py-1.5 rounded font-medium hover:bg-orange-600 transition-colors duration-200 w-full text-center text-xs"
-                      >
-                        Click here to Launch the application
-                      </a>
-                    ) : (
-                      <div className="bg-gray-100 text-gray-600 px-3 py-1.5 rounded font-medium w-full text-center text-xs">
-                        Coming Soon
-                      </div>
-                    )}
-                  </div>
-                </div>
+
               </div>
             </div>
           </div>
