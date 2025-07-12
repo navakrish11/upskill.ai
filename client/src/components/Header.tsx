@@ -46,77 +46,11 @@ export default function Header() {
             <span className="text-xl font-semibold text-exl-midnight">Upskill.AI</span>
           </div>
           
-          {/* Navigation */}
-          <nav className="hidden md:flex items-center space-x-8 ml-auto">
-            <button 
-              onClick={() => window.open("https://agenticairi-app6.exlservice.com/", "_blank")}
-              className="text-exl-slate hover:text-exl-orange transition-colors duration-200"
-            >
-              AI Trainer
-            </button>
-            <button 
-              onClick={() => window.open("https://miaisimulatorapp.exlservice.com/", "_blank")}
-              className="text-exl-slate hover:text-exl-orange transition-colors duration-200"
-            >
-              MiAI Simulator
-            </button>
-            <button 
-              onClick={() => setLocation("/coming-soon")}
-              className="text-exl-slate hover:text-exl-orange transition-colors duration-200"
-            >
-              Gamification
-            </button>
-            <button 
-              onClick={() => scrollToSection("contact")}
-              className="text-exl-slate hover:text-exl-orange transition-colors duration-200"
-            >
-              Contact
-            </button>
-          </nav>
-          
-          {/* Mobile menu button */}
-          <div className="flex items-center ml-auto md:hidden">
-            <button 
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-md text-exl-slate hover:text-exl-orange"
-            >
-              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
-          </div>
+
+
         </div>
 
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-100 px-4 py-4 space-y-4">
-            <button 
-              onClick={() => window.open("https://agenticairi-app6.exlservice.com/", "_blank")}
-              className="block text-exl-slate hover:text-exl-orange transition-colors duration-200"
-            >
-              AI Trainer
-            </button>
-            <button 
-              onClick={() => window.open("https://miaisimulatorapp.exlservice.com/", "_blank")}
-              className="block text-exl-slate hover:text-exl-orange transition-colors duration-200"
-            >
-              MiAI Simulator
-            </button>
-            <button 
-              onClick={() => {
-                setLocation("/coming-soon");
-                setMobileMenuOpen(false);
-              }}
-              className="block text-exl-slate hover:text-exl-orange transition-colors duration-200"
-            >
-              Gamification
-            </button>
-            <button 
-              onClick={() => scrollToSection("contact")}
-              className="block text-exl-slate hover:text-exl-orange transition-colors duration-200"
-            >
-              Contact
-            </button>
-          </div>
-        )}
+
       </div>
     </header>
   );
