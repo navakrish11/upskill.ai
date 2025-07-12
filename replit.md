@@ -112,6 +112,7 @@ Changelog:
 - July 12, 2025. Added contact email "#EAI-All@exlservice.com" to footer below social media icons
 - July 12, 2025. Updated AI Trainer navigation link to redirect to "https://agenticairi-app6.exlservice.com/" instead of scrolling to card
 - July 12, 2025. Updated MiAI Simulator navigation link to redirect to "https://miaisimulator.exlservice.com/" instead of scrolling to card
+- July 12, 2025. Added "Up to 35% Reduction in Training Costs" metric to Technology Showcase business value section
 
 ## User Preferences
 

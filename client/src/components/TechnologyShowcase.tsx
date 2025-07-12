@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Clock, TrendingUp, Users, Cloud, Mic, Database, Gamepad2 } from "lucide-react";
+import { Clock, TrendingUp, Users, DollarSign, Cloud, Mic, Database, Gamepad2 } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const businessValueItems = [
@@ -23,6 +23,13 @@ const businessValueItems = [
     subtitle: "Reduction in ramp-up attrition",
     bgColor: "bg-blue-100",
     iconColor: "text-blue-600"
+  },
+  {
+    icon: DollarSign,
+    title: "Up to 35%",
+    subtitle: "Reduction in Training Costs",
+    bgColor: "bg-green-100",
+    iconColor: "text-green-600"
   }
 ];
 
@@ -77,7 +84,7 @@ export default function TechnologyShowcase() {
           </TabsList>
           
           <TabsContent value="business" className="space-y-8">
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-4 gap-8">
               {businessValueItems.map((item, index) => {
                 const IconComponent = item.icon;
                 return (
