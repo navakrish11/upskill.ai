@@ -2,7 +2,7 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import FlippableSolutionCard from "@/components/FlippableSolutionCard";
-import TechnologyShowcase from "@/components/TechnologyShowcase";
+
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import VideoModal from "@/components/VideoModal";
@@ -150,7 +150,6 @@ export default function Landing() {
         </div>
       </section>
 
-      <TechnologyShowcase />
       <ContactForm />
       <Footer />
       
