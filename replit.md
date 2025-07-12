@@ -108,6 +108,7 @@ Changelog:
 - July 09, 2025. Updated solution card descriptions with more compelling and specific messaging
 - July 12, 2025. Fixed scroll bar issue in FlippableSolutionCard details view by optimizing content layout
 - July 12, 2025. Updated AI Trainer technology stack: replaced TensorFlow with Langchain, Unity 3D with Next.js, Azure Speech Services with Blob, and OpenAI GPT-4 with GPT-4o
+- July 12, 2025. Updated AI Trainer description to focus on "narrated video modules" instead of "voice-narrated training experiences"
 
 ## User Preferences
 
