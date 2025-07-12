@@ -221,72 +221,72 @@ export default function FlippableSolutionCard({
             </div>
 
             {/* Tab Content */}
-            <div className="p-6 flex-grow overflow-y-auto">
+            <div className="p-4 flex-grow overflow-hidden">
               {activeTab === "tech" && (
-                <div className="space-y-4">
+                <div className="space-y-3">
                   <div>
-                    <h5 className="font-semibold text-exl-midnight mb-3">Technologies</h5>
-                    <div className="grid grid-cols-1 gap-2">
+                    <h5 className="font-semibold text-exl-midnight mb-2">Technologies</h5>
+                    <div className="grid grid-cols-2 gap-1">
                       {techDetails.technologies.map((tech, index) => (
-                        <div key={index} className="text-sm text-exl-slate bg-gray-50 px-3 py-2 rounded-lg">
+                        <div key={index} className="text-xs text-exl-slate bg-gray-50 px-2 py-1 rounded">
                           {tech}
                         </div>
                       ))}
                     </div>
                   </div>
                   <div>
-                    <h5 className="font-semibold text-exl-midnight mb-3">Architecture</h5>
-                    <p className="text-sm text-exl-slate leading-relaxed">{techDetails.architecture}</p>
+                    <h5 className="font-semibold text-exl-midnight mb-2">Architecture</h5>
+                    <p className="text-xs text-exl-slate leading-relaxed">{techDetails.architecture}</p>
                   </div>
                   <div>
-                    <h5 className="font-semibold text-exl-midnight mb-3">Deployment</h5>
-                    <p className="text-sm text-exl-slate leading-relaxed">{techDetails.deployment}</p>
+                    <h5 className="font-semibold text-exl-midnight mb-2">Deployment</h5>
+                    <p className="text-xs text-exl-slate leading-relaxed">{techDetails.deployment}</p>
                   </div>
                 </div>
               )}
 
               {activeTab === "product" && (
-                <div className="space-y-4">
+                <div className="space-y-3">
                   <div>
-                    <h5 className="font-semibold text-exl-midnight mb-3">Team Lead</h5>
-                    <p className="text-sm text-exl-slate bg-gray-50 px-3 py-2 rounded-lg">{productTeam.lead}</p>
+                    <h5 className="font-semibold text-exl-midnight mb-2">Team Lead</h5>
+                    <p className="text-xs text-exl-slate bg-gray-50 px-2 py-1 rounded">{productTeam.lead}</p>
                   </div>
                   <div>
-                    <h5 className="font-semibold text-exl-midnight mb-3">Team Members</h5>
-                    <div className="space-y-2">
+                    <h5 className="font-semibold text-exl-midnight mb-2">Team Members</h5>
+                    <div className="space-y-1">
                       {productTeam.members.map((member, index) => (
-                        <div key={index} className="text-sm text-exl-slate bg-gray-50 px-3 py-2 rounded-lg">
+                        <div key={index} className="text-xs text-exl-slate bg-gray-50 px-2 py-1 rounded">
                           {member}
                         </div>
                       ))}
                     </div>
                   </div>
                   <div>
-                    <h5 className="font-semibold text-exl-midnight mb-3">Contact</h5>
-                    <p className="text-sm text-exl-slate bg-gray-50 px-3 py-2 rounded-lg">{productTeam.contact}</p>
+                    <h5 className="font-semibold text-exl-midnight mb-2">Contact</h5>
+                    <p className="text-xs text-exl-slate bg-gray-50 px-2 py-1 rounded">{productTeam.contact}</p>
                   </div>
                 </div>
               )}
 
               {activeTab === "functional" && (
-                <div className="space-y-4">
+                <div className="space-y-3">
                   <div>
-                    <h5 className="font-semibold text-exl-midnight mb-3">Team Lead</h5>
-                    <p className="text-sm text-exl-slate bg-gray-50 px-3 py-2 rounded-lg">{functionalTeam.lead}</p>
+                    <h5 className="font-semibold text-exl-midnight mb-2">Team Lead</h5>
+                    <p className="text-xs text-exl-slate bg-gray-50 px-2 py-1 rounded">{functionalTeam.lead}</p>
                   </div>
                   <div>
-                    <h5 className="font-semibold text-exl-midnight mb-3">Team Members</h5>
-                    <div className="space-y-2">
+                    <h5 className="font-semibold text-exl-midnight mb-2">Team Members</h5>
+                    <div className="space-y-1">
                       {functionalTeam.members.map((member, index) => (
-                        <div key={index} className="text-sm text-exl-slate bg-gray-50 px-3 py-2 rounded-lg">
+                        <div key={index} className="text-xs text-exl-slate bg-gray-50 px-2 py-1 rounded">
                           {member}
                         </div>
                       ))}
                     </div>
                   </div>
                   <div>
-                    <h5 className="font-semibold text-exl-midnight mb-3">Contact</h5>
-                    <p className="text-sm text-exl-slate bg-gray-50 px-3 py-2 rounded-lg">{functionalTeam.contact}</p>
+                    <h5 className="font-semibold text-exl-midnight mb-2">Contact</h5>
+                    <p className="text-xs text-exl-slate bg-gray-50 px-2 py-1 rounded">{functionalTeam.contact}</p>
                   </div>
                 </div>
               )}
