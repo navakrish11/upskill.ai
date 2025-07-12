@@ -196,6 +196,25 @@ export default function FlippableSolutionCard({
                       <p className="text-xs text-exl-slate leading-relaxed">Scalable, cloud-native performance</p>
                     </div>
                   </div>
+                ) : id === "miai-simulator" ? (
+                  <div className="space-y-2">
+                    <div className="flex items-start">
+                      <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
+                      <p className="text-xs text-exl-slate leading-relaxed">Real-time simulation of customer conversations</p>
+                    </div>
+                    <div className="flex items-start">
+                      <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
+                      <p className="text-xs text-exl-slate leading-relaxed">AI-powered sentiment and speech analysis</p>
+                    </div>
+                    <div className="flex items-start">
+                      <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
+                      <p className="text-xs text-exl-slate leading-relaxed">Instant feedback and adaptive learning</p>
+                    </div>
+                    <div className="flex items-start">
+                      <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
+                      <p className="text-xs text-exl-slate leading-relaxed">Secure, scalable cloud-based deployment</p>
+                    </div>
+                  </div>
                 ) : (
                   <>
                     <div>
