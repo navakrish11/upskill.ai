@@ -145,10 +145,16 @@ export default function FlippableSolutionCard({
                     Launch Application
                   </a>
                 ) : (
-                  <div className="flex items-center justify-center bg-gray-100 text-gray-600 px-4 py-2 rounded-lg font-medium w-full text-sm">
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      alert("Coming Soon! This feature is currently under development and will be available soon.");
+                    }}
+                    className="flex items-center justify-center bg-gray-100 text-gray-600 px-4 py-2 rounded-lg font-medium hover:bg-gray-200 transition-colors duration-200 w-full text-sm"
+                  >
                     <Clock className="h-5 w-5 mr-2" />
                     Coming Soon
-                  </div>
+                  </button>
                 )}
               </div>
             </div>
