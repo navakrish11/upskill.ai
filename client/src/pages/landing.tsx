@@ -125,11 +125,11 @@ export default function Landing() {
       <HeroSection onVideoOpen={handleVideoOpen} />
       
       {/* Platform Overview Section */}
-      <section className="py-8 lg:py-12 bg-white">
+      <section className="py-4 lg:py-6 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
-          <div className="text-center mb-8">
-            <h2 className="text-2xl lg:text-3xl font-bold text-exl-midnight mb-3">
+          <div className="text-center mb-6">
+            <h2 className="text-2xl lg:text-3xl font-bold text-exl-midnight mb-2">
               Three Core AI Solutions
             </h2>
             <p className="text-base text-exl-slate max-w-3xl mx-auto">
@@ -138,7 +138,7 @@ export default function Landing() {
           </div>
           
           {/* Solutions Grid */}
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-start">
+          <div className="grid md:grid-cols-3 gap-4 lg:gap-6 items-start">
             {solutions.map((solution) => (
               <FlippableSolutionCard 
                 key={solution.id}

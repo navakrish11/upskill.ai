@@ -20,7 +20,7 @@ export default function HeroSection({ onVideoOpen }: HeroSectionProps) {
     <section className="bg-gradient-to-br from-exl-light to-white pt-6 pb-2 lg:pt-8 lg:pb-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-4xl mx-auto">
-          <div className="mb-4">
+          <div className="mb-2">
             <svg 
               viewBox="0 0 800 120" 
               className="w-full max-w-4xl mx-auto h-auto cursor-pointer"
