@@ -11,8 +11,8 @@ interface VideoModalProps {
 export default function VideoModal({ isOpen, onClose, videoSrc, title }: VideoModalProps) {
   if (!isOpen) return null;
 
-  // Check if this is a coming soon demo
-  const isComingSoon = videoSrc.includes("miai-call-demo.mp4") || videoSrc.includes("gamification-demo.mp4");
+  // All videos are now available - no coming soon needed
+  const isComingSoon = false;
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
@@ -46,15 +46,26 @@ export default function VideoModal({ isOpen, onClose, videoSrc, title }: VideoMo
               </p>
             </div>
           ) : (
-            <video
-              src={videoSrc}
-              controls
-              className="w-full h-full"
-              autoPlay
-              playsInline
-            >
-              Your browser does not support the video tag.
-            </video>
+            <div className="w-full h-full relative">
+              <video
+                src={videoSrc}
+                controls
+                className="w-full h-full object-contain"
+                preload="metadata"
+                playsInline
+                controlsList="nodownload"
+              >
+                <source src={videoSrc} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              {/* Fallback message */}
+              <div className="absolute inset-0 flex items-center justify-center text-white text-center p-8 bg-black bg-opacity-50 hidden" id="video-fallback">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Video Loading...</h3>
+                  <p className="text-sm">If the video doesn't load, please check your internet connection.</p>
+                </div>
+              </div>
+            </div>
           )}
         </div>
         
