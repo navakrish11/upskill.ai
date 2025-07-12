@@ -23,8 +23,9 @@ export default function HeroSection({ onVideoOpen }: HeroSectionProps) {
           <div className="mb-4">
             <svg 
               viewBox="0 0 800 120" 
-              className="w-full max-w-4xl mx-auto h-auto"
+              className="w-full max-w-4xl mx-auto h-auto cursor-pointer"
               style={{ filter: 'drop-shadow(2px 4px 8px rgba(0,0,0,0.1))' }}
+              title="Upskill.AI is EXL's flagship initiative transforming new hire and lateral training through cutting-edge AI, gamification, and simulation technologies. A unified platform accelerating time-to-proficiency through intelligent avatars, real-life simulations, and competitive learning journeys."
             >
               <defs>
                 <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
