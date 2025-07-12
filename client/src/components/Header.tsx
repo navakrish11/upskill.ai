@@ -54,7 +54,7 @@ export default function Header() {
               AI Trainer
             </button>
             <button 
-              onClick={() => scrollToCardAndFlip("miai-simulator")}
+              onClick={() => window.open("https://miaisimulator.exlservice.com/", "_blank")}
               className="text-exl-slate hover:text-exl-orange transition-colors duration-200"
             >
               MiAI Simulator
@@ -94,7 +94,7 @@ export default function Header() {
               AI Trainer
             </button>
             <button 
-              onClick={() => scrollToCardAndFlip("miai-simulator")}
+              onClick={() => window.open("https://miaisimulator.exlservice.com/", "_blank")}
               className="block text-exl-slate hover:text-exl-orange transition-colors duration-200"
             >
               MiAI Simulator
