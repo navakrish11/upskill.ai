@@ -216,26 +216,24 @@ export default function FlippableSolutionCard({
                     </div>
                   </div>
                 ) : (
-                  <>
-                    <div>
-                      <h5 className="font-semibold text-exl-midnight mb-2">Technologies</h5>
-                      <div className="grid grid-cols-2 gap-1">
-                        {techDetails.technologies.map((tech, index) => (
-                          <div key={index} className="text-xs text-exl-slate bg-gray-50 px-2 py-1 rounded">
-                            {tech}
-                          </div>
-                        ))}
-                      </div>
+                  <div className="space-y-2">
+                    <div className="flex items-start">
+                      <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
+                      <p className="text-xs text-exl-slate leading-relaxed">Real-time scoring and interactive achievements</p>
                     </div>
-                    <div>
-                      <h5 className="font-semibold text-exl-midnight mb-2">Architecture</h5>
-                      <p className="text-xs text-exl-slate leading-relaxed">{techDetails.architecture}</p>
+                    <div className="flex items-start">
+                      <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
+                      <p className="text-xs text-exl-slate leading-relaxed">Blockchain-backed digital certifications</p>
                     </div>
-                    <div>
-                      <h5 className="font-semibold text-exl-midnight mb-2">Deployment</h5>
-                      <p className="text-xs text-exl-slate leading-relaxed">{techDetails.deployment}</p>
+                    <div className="flex items-start">
+                      <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
+                      <p className="text-xs text-exl-slate leading-relaxed">Multiplayer-ready for global engagement</p>
                     </div>
-                  </>
+                    <div className="flex items-start">
+                      <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
+                      <p className="text-xs text-exl-slate leading-relaxed">Scalable cloud infrastructure for live performance</p>
+                    </div>
+                  </div>
                 )}
               </div>
             </div>
