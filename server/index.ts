@@ -6,8 +6,9 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// Add video streaming support for production
-app.use('/videos', express.static('client/public/videos', {
+// Add video streaming support for both development and production
+const videoPath = app.get("env") === "development" ? 'client/public/videos' : 'dist/public/videos';
+app.use('/videos', express.static(videoPath, {
   setHeaders: (res, path) => {
     if (path.endsWith('.mp4')) {
       res.set('Content-Type', 'video/mp4');
