@@ -234,10 +234,10 @@ export default function FlippableSolutionCard({
             </div>
             
             {/* Bottom colored section matching header */}
-            <div className={`h-16 bg-gradient-to-br ${bgGradient} rounded-b-2xl relative overflow-hidden`}>
+            <div className={`h-8 bg-gradient-to-br ${bgGradient} rounded-b-2xl relative overflow-hidden`}>
               <div className="absolute inset-0 bg-black bg-opacity-20"></div>
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-8 h-1 bg-white/30 rounded-full"></div>
+                <div className="w-6 h-0.5 bg-white/30 rounded-full"></div>
               </div>
             </div>
           </div>
