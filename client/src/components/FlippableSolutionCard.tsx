@@ -174,29 +174,53 @@ export default function FlippableSolutionCard({
 
             
 
-            {/* Tech Details Content */}
+            {/* Content based on card type */}
             <div className="p-4 flex-grow overflow-hidden">
               <div className="space-y-3">
-                <div>
-                  <h5 className="font-semibold text-exl-midnight mb-2">Technologies</h5>
-                  <div className="grid grid-cols-2 gap-1">
-                    {techDetails.technologies.map((tech, index) => (
-                      <div key={index} className="text-xs text-exl-slate bg-gray-50 px-2 py-1 rounded">
-                        {tech}
+                {id === "ai-trainer" ? (
+                  <div>
+                    <h5 className="font-semibold text-exl-midnight mb-3">AI Trainer Highlights</h5>
+                    <div className="space-y-2">
+                      <div className="flex items-start">
+                        <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
+                        <p className="text-xs text-exl-slate">AI driven personalization for smarter learning</p>
                       </div>
-                    ))}
+                      <div className="flex items-start">
+                        <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
+                        <p className="text-xs text-exl-slate">Seamless experience across web & mobile</p>
+                      </div>
+                      <div className="flex items-start">
+                        <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
+                        <p className="text-xs text-exl-slate">Real-time avatar-based interactions</p>
+                      </div>
+                      <div className="flex items-start">
+                        <div className="w-2 h-2 bg-exl-orange rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
+                        <p className="text-xs text-exl-slate">Scalable, cloud-native performance</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div>
-                  <h5 className="font-semibold text-exl-midnight mb-2">Architecture</h5>
-                  <p className="text-xs text-exl-slate leading-relaxed">{techDetails.architecture}</p>
-                </div>
-                <div>
-                  <h5 className="font-semibold text-exl-midnight mb-2">Deployment</h5>
-                  <p className="text-xs text-exl-slate leading-relaxed">{techDetails.deployment}</p>
-                </div>
-                
-
+                ) : (
+                  <>
+                    <div>
+                      <h5 className="font-semibold text-exl-midnight mb-2">Technologies</h5>
+                      <div className="grid grid-cols-2 gap-1">
+                        {techDetails.technologies.map((tech, index) => (
+                          <div key={index} className="text-xs text-exl-slate bg-gray-50 px-2 py-1 rounded">
+                            {tech}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <h5 className="font-semibold text-exl-midnight mb-2">Architecture</h5>
+                      <p className="text-xs text-exl-slate leading-relaxed">{techDetails.architecture}</p>
+                    </div>
+                    <div>
+                      <h5 className="font-semibold text-exl-midnight mb-2">Deployment</h5>
+                      <p className="text-xs text-exl-slate leading-relaxed">{techDetails.deployment}</p>
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           </div>
