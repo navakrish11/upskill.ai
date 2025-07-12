@@ -110,6 +110,7 @@ Changelog:
 - July 12, 2025. Updated AI Trainer technology stack: replaced TensorFlow with Langchain, Unity 3D with Next.js, Azure Speech Services with Blob, and OpenAI GPT-4 with GPT-4o
 - July 12, 2025. Updated AI Trainer description to focus on "narrated video modules" instead of "voice-narrated training experiences"
 - July 12, 2025. Added contact email "#EAI-All@exlservice.com" to footer below social media icons
+- July 12, 2025. Updated AI Trainer navigation link to redirect to "https://agenticairi-app6.exlservice.com/" instead of scrolling to card
 
 ## User Preferences
 

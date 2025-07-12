@@ -48,7 +48,7 @@ export default function Header() {
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8 ml-auto">
             <button 
-              onClick={() => scrollToCardAndFlip("ai-trainer")}
+              onClick={() => window.open("https://agenticairi-app6.exlservice.com/", "_blank")}
               className="text-exl-slate hover:text-exl-orange transition-colors duration-200"
             >
               AI Trainer
@@ -88,7 +88,7 @@ export default function Header() {
         {mobileMenuOpen && (
           <div className="md:hidden bg-white border-t border-gray-100 px-4 py-4 space-y-4">
             <button 
-              onClick={() => scrollToCardAndFlip("ai-trainer")}
+              onClick={() => window.open("https://agenticairi-app6.exlservice.com/", "_blank")}
               className="block text-exl-slate hover:text-exl-orange transition-colors duration-200"
             >
               AI Trainer
