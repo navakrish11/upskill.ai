@@ -119,6 +119,7 @@ Changelog:
 - July 12, 2025. Modified VideoModal to show "Coming Soon" message for MiAI Call Simulator and Gamification Experience demos
 - July 12, 2025. Updated MiAI Simulator navigation link from "https://miaisimulator.exlservice.com/" to "https://miaisimulatorapp.exlservice.com/"
 - July 12, 2025. Removed all navigation buttons from header (AI Trainer, MiAI Simulator, Gamification, Contact) for cleaner branding-focused design
+- July 12, 2025. Optimized page layout to fit hero section and all three solution cards above the fold without scrolling
 
 ## User Preferences
 

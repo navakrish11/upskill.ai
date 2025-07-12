@@ -128,17 +128,17 @@ export default function Landing() {
       <section className="py-8 lg:py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-exl-midnight mb-4">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl lg:text-3xl font-bold text-exl-midnight mb-3">
               Three Core AI Solutions
             </h2>
-            <p className="text-lg text-exl-slate max-w-3xl mx-auto">
+            <p className="text-base text-exl-slate max-w-3xl mx-auto">
               Our platform is anchored on three innovative solutions designed to transform how organizations approach training and development.
             </p>
           </div>
           
           {/* Solutions Grid */}
-          <div className="grid md:grid-cols-3 gap-8 lg:gap-12 items-start">
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-start">
             {solutions.map((solution) => (
               <FlippableSolutionCard 
                 key={solution.id}
