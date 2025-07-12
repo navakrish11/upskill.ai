@@ -17,22 +17,22 @@ export default function HeroSection({ onVideoOpen }: HeroSectionProps) {
   };
 
   return (
-    <section className="bg-gradient-to-br from-exl-light to-white py-16 lg:py-24">
+    <section className="bg-gradient-to-br from-exl-light to-white py-8 lg:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-4xl mx-auto">
-          <h1 className="text-4xl lg:text-6xl font-bold text-exl-midnight leading-tight mb-6">
+          <h1 className="text-3xl lg:text-4xl font-bold text-exl-midnight leading-tight mb-4">
             Reimagine Learning & Readiness with{" "}
             <span className="text-exl-orange">EXL's AI Training Suite</span>
           </h1>
-          <p className="text-xl text-exl-slate leading-relaxed mb-8 max-w-3xl mx-auto">
+          <p className="text-lg text-exl-slate leading-relaxed mb-6 max-w-3xl mx-auto">
             Upskill.AI is EXL's flagship initiative transforming new hire and lateral training through cutting-edge AI, gamification, and simulation technologies. A unified platform accelerating time-to-proficiency through intelligent avatars, real-life simulations, and competitive learning journeys.
           </p>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Button 
               onClick={handleGetStarted}
-              className="bg-exl-orange text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-orange-600 transition-all duration-200 transform hover:scale-105"
+              className="bg-exl-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-all duration-200 transform hover:scale-105"
             >
               Get Started
             </Button>
