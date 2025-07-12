@@ -1,6 +1,42 @@
 import { useState, useEffect } from "react";
 import { Play, ArrowLeft, ExternalLink, Clock } from "lucide-react";
 
+// LaunchButton component for handling gamification coming soon state
+function LaunchButton({ id }: { id: string }) {
+  const [showComingSoon, setShowComingSoon] = useState(false);
+
+  const handleClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    
+    if (id === "ai-trainer") {
+      window.open("https://agenticairi-app6.exlservice.com/", "_blank");
+    } else if (id === "miai-simulator") {
+      window.open("https://miaisimulatorapp.exlservice.com/", "_blank");
+    } else if (id === "gamification") {
+      setShowComingSoon(true);
+    }
+  };
+
+  if (showComingSoon) {
+    return (
+      <div className="flex items-center justify-center bg-gray-100 text-gray-600 px-4 py-2 rounded-lg font-medium w-full text-sm">
+        <Clock className="h-5 w-5 mr-2" />
+        Coming Soon
+      </div>
+    );
+  }
+
+  return (
+    <button
+      onClick={handleClick}
+      className="flex items-center justify-center bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200 w-full text-sm"
+    >
+      <ExternalLink className="h-5 w-5 mr-2" />
+      Launch Application
+    </button>
+  );
+}
+
 interface FlippableSolutionCardProps {
   id: string;
   title: string;
@@ -133,29 +169,7 @@ export default function FlippableSolutionCard({
                 </button>
                 
                 {/* Launch Application Button */}
-                {(id === "ai-trainer" || id === "miai-simulator") ? (
-                  <a 
-                    href={id === "ai-trainer" ? "https://agenticairi-app6.exlservice.com/" : "https://miaisimulatorapp.exlservice.com/"}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
-                    className="flex items-center justify-center bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200 w-full text-sm"
-                  >
-                    <ExternalLink className="h-5 w-5 mr-2" />
-                    Launch Application
-                  </a>
-                ) : (
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      alert("Coming Soon! This feature is currently under development and will be available soon.");
-                    }}
-                    className="flex items-center justify-center bg-gray-100 text-gray-600 px-4 py-2 rounded-lg font-medium hover:bg-gray-200 transition-colors duration-200 w-full text-sm"
-                  >
-                    <Clock className="h-5 w-5 mr-2" />
-                    Coming Soon
-                  </button>
-                )}
+                <LaunchButton id={id} />
               </div>
             </div>
           </div>
