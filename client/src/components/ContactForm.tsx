@@ -5,7 +5,11 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 
-export default function ContactForm() {
+interface ContactFormProps {
+  isVisible: boolean;
+}
+
+export default function ContactForm({ isVisible }: ContactFormProps) {
   const [formData, setFormData] = useState({
     fullName: "",
     workEmail: "",
@@ -66,6 +70,8 @@ export default function ContactForm() {
       setIsSubmitting(false);
     }
   };
+
+  if (!isVisible) return null;
 
   return (
     <section className="py-16 lg:py-24 bg-gradient-to-br from-exl-midnight to-exl-slate">

@@ -103,6 +103,8 @@ export default function Landing() {
     title: ""
   });
 
+  const [showContactForm, setShowContactForm] = useState(false);
+
   const handleVideoOpen = (videoSrc: string, title: string) => {
     setVideoModal({
       isOpen: true,
@@ -150,7 +152,23 @@ export default function Landing() {
         </div>
       </section>
 
-      <ContactForm />
+      <ContactForm isVisible={showContactForm} />
+      
+      {/* Book Demo Button */}
+      {!showContactForm && (
+        <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50">
+          <button
+            onClick={() => setShowContactForm(true)}
+            className="bg-exl-orange hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center space-x-2"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <span>Book Demo</span>
+          </button>
+        </div>
+      )}
+      
       <Footer />
       
       {/* Video Modal */}
