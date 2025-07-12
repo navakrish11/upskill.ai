@@ -17,7 +17,7 @@ export default function HeroSection({ onVideoOpen }: HeroSectionProps) {
   };
 
   return (
-    <section className="bg-gradient-to-br from-exl-light to-white pt-6 pb-2 lg:pt-8 lg:pb-4">
+    <section className="bg-gradient-to-br from-exl-light to-white pt-4 pb-2 lg:pt-6 lg:pb-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-4xl mx-auto">
           <div className="mb-2">

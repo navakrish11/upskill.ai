@@ -125,7 +125,7 @@ export default function Landing() {
       <HeroSection onVideoOpen={handleVideoOpen} />
       
       {/* Platform Overview Section */}
-      <section className="py-4 lg:py-6 bg-white">
+      <section className="py-2 lg:py-4 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center mb-6">
