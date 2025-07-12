@@ -99,7 +99,7 @@ export default function FlippableSolutionCard({
         <div className="absolute inset-0 w-full h-full backface-hidden">
           <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 h-full flex flex-col">
             {/* Solution visual representation */}
-            <div className={`h-32 bg-gradient-to-br ${bgGradient} rounded-t-2xl relative overflow-hidden flex-shrink-0`}>
+            <div className={`h-24 bg-gradient-to-br ${bgGradient} rounded-t-2xl relative overflow-hidden flex-shrink-0`}>
               <div className="absolute inset-0 bg-black bg-opacity-20"></div>
               <div className="absolute bottom-4 left-4 text-white">
                 <svg className="h-12 w-12" fill="currentColor" viewBox="0 0 24 24">
@@ -113,7 +113,7 @@ export default function FlippableSolutionCard({
             
             <div className="p-4 flex flex-col flex-grow">
               <h3 className="text-lg font-bold text-exl-midnight mb-3">{title}</h3>
-              <div className="h-20 overflow-hidden mb-4">
+              <div className="h-24 overflow-hidden mb-4">
                 <p className="text-sm text-exl-slate leading-snug">
                   {description}
                 </p>
