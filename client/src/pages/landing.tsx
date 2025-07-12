@@ -123,7 +123,7 @@ export default function Landing() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header />
+      <Header onBookDemo={() => setShowContactForm(true)} />
       <HeroSection onVideoOpen={handleVideoOpen} />
       
       {/* Platform Overview Section */}
@@ -152,20 +152,28 @@ export default function Landing() {
         </div>
       </section>
 
-      <ContactForm isVisible={showContactForm} />
-      
-      {/* Book Demo Button */}
-      {!showContactForm && (
-        <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50">
-          <button
-            onClick={() => setShowContactForm(true)}
-            className="bg-exl-orange hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center space-x-2"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
-            <span>Book Demo</span>
-          </button>
+      {/* Book Demo Popup */}
+      {showContactForm && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative">
+            <button
+              onClick={() => setShowContactForm(false)}
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl z-10"
+            >
+              ×
+            </button>
+            <div className="p-8 lg:p-12">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl lg:text-4xl font-bold text-exl-midnight">
+                  Ready to Transform Your Training?
+                </h2>
+                <p className="text-lg max-w-3xl mx-auto text-exl-slate mt-4">
+                  See Upskill.AI in action. Book a personalized demo and discover how AI can accelerate your team's learning journey.
+                </p>
+              </div>
+              <ContactForm isVisible={true} />
+            </div>
+          </div>
         </div>
       )}
       

@@ -74,18 +74,7 @@ export default function ContactForm({ isVisible }: ContactFormProps) {
   if (!isVisible) return null;
 
   return (
-    <section className="py-16 lg:py-24 bg-gradient-to-br from-exl-midnight to-exl-slate">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white">
-            Ready to Transform Your Training?
-          </h2>
-          <p className="text-xl max-w-3xl mx-auto text-[#3e4a4a]">
-            See Upskill.AI in action. Book a personalized demo and discover how AI can accelerate your team's learning journey.
-          </p>
-        </div>
-
-        <div className="bg-white rounded-2xl shadow-2xl p-8 lg:p-12">
+    <div className="bg-white rounded-2xl shadow-2xl p-8 lg:p-12">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               {/* Full Name */}
@@ -173,8 +162,6 @@ export default function ContactForm({ isVisible }: ContactFormProps) {
               We'll respond within 24 hours to schedule your personalized demo.
             </p>
           </form>
-        </div>
-      </div>
-    </section>
+    </div>
   );
 }

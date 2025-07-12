@@ -3,7 +3,11 @@ import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export default function Header() {
+interface HeaderProps {
+  onBookDemo: () => void;
+}
+
+export default function Header({ onBookDemo }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [, setLocation] = useLocation();
 
@@ -34,7 +38,7 @@ export default function Header() {
   return (
     <header className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center py-2">
+        <div className="flex items-center justify-between py-2">
           {/* EXL Logo */}
           <div className="flex items-center space-x-3">
             <img 
@@ -46,8 +50,21 @@ export default function Header() {
             <span className="text-xl font-semibold text-exl-midnight">Upskill.AI</span>
           </div>
           
-
-
+          {/* Book Demo Button */}
+          <button
+            onClick={onBookDemo}
+            className="relative group cursor-pointer"
+          >
+            <div className="text-right">
+              <div className="text-2xl font-bold bg-gradient-to-r from-exl-orange to-orange-600 bg-clip-text text-transparent font-serif italic">
+                Book a Demo
+              </div>
+              <div className="text-xs text-exl-slate font-medium opacity-75 group-hover:opacity-100 transition-opacity">
+                See AI in Action
+              </div>
+            </div>
+            <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-exl-orange to-orange-600 group-hover:w-full transition-all duration-300"></div>
+          </button>
         </div>
 
 
