@@ -64,6 +64,13 @@ export default function Footer() {
                 <FaYoutube className="w-5 h-5 text-gray-300" />
               </button>
             </div>
+            
+            {/* Email */}
+            <div className="mt-6">
+              <p className="text-gray-300">
+                Email: <a href="mailto:#EAI-All@exlservice.com" className="text-exl-orange hover:text-orange-400 transition-colors duration-200">#EAI-All@exlservice.com</a>
+              </p>
+            </div>
           </div>
           
           {/* Products */}
