@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Play, Users, Code, Settings, ArrowLeft } from "lucide-react";
+import { Play, ArrowLeft } from "lucide-react";
 
 interface FlippableSolutionCardProps {
   id: string;
@@ -47,13 +47,11 @@ export default function FlippableSolutionCard({
   functionalTeam
 }: FlippableSolutionCardProps) {
   const [isFlipped, setIsFlipped] = useState(false);
-  const [activeTab, setActiveTab] = useState("tech");
 
   useEffect(() => {
     const handleFlipCard = (event: CustomEvent) => {
       if (event.detail.cardId === id) {
         setIsFlipped(true);
-        setActiveTab("tech"); // Reset to tech tab when flipping from external source
       } else {
         // Reset this card to front view if another card is being flipped
         setIsFlipped(false);
@@ -174,85 +172,30 @@ export default function FlippableSolutionCard({
               </div>
             </div>
 
-            {/* Tab Navigation */}
-            <div className="flex border-b border-gray-200 flex-shrink-0">
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setActiveTab("tech");
-                }}
-                className={`flex items-center px-4 py-3 font-medium text-sm transition-colors duration-200 flex-1 justify-center ${
-                  activeTab === "tech"
-                    ? "text-exl-orange border-b-2 border-exl-orange bg-orange-50"
-                    : "text-exl-slate hover:text-exl-midnight"
-                }`}
-              >
-                <Code className="h-4 w-4 mr-2" />
-                Tech Details
-              </button>
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setActiveTab("functional");
-                }}
-                className={`flex items-center px-4 py-3 font-medium text-sm transition-colors duration-200 flex-1 justify-center ${
-                  activeTab === "functional"
-                    ? "text-exl-orange border-b-2 border-exl-orange bg-orange-50"
-                    : "text-exl-slate hover:text-exl-midnight"
-                }`}
-              >
-                <Settings className="h-4 w-4 mr-2" />
-                Functional Team
-              </button>
-            </div>
+            
 
-            {/* Tab Content */}
+            {/* Tech Details Content */}
             <div className="p-4 flex-grow overflow-hidden">
-              {activeTab === "tech" && (
-                <div className="space-y-3">
-                  <div>
-                    <h5 className="font-semibold text-exl-midnight mb-2">Technologies</h5>
-                    <div className="grid grid-cols-2 gap-1">
-                      {techDetails.technologies.map((tech, index) => (
-                        <div key={index} className="text-xs text-exl-slate bg-gray-50 px-2 py-1 rounded">
-                          {tech}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  <div>
-                    <h5 className="font-semibold text-exl-midnight mb-2">Architecture</h5>
-                    <p className="text-xs text-exl-slate leading-relaxed">{techDetails.architecture}</p>
-                  </div>
-                  <div>
-                    <h5 className="font-semibold text-exl-midnight mb-2">Deployment</h5>
-                    <p className="text-xs text-exl-slate leading-relaxed">{techDetails.deployment}</p>
+              <div className="space-y-3">
+                <div>
+                  <h5 className="font-semibold text-exl-midnight mb-2">Technologies</h5>
+                  <div className="grid grid-cols-2 gap-1">
+                    {techDetails.technologies.map((tech, index) => (
+                      <div key={index} className="text-xs text-exl-slate bg-gray-50 px-2 py-1 rounded">
+                        {tech}
+                      </div>
+                    ))}
                   </div>
                 </div>
-              )}
-
-              {activeTab === "functional" && (
-                <div className="space-y-3">
-                  <div>
-                    <h5 className="font-semibold text-exl-midnight mb-2">Team Lead</h5>
-                    <p className="text-xs text-exl-slate bg-gray-50 px-2 py-1 rounded">{functionalTeam.lead}</p>
-                  </div>
-                  <div>
-                    <h5 className="font-semibold text-exl-midnight mb-2">Team Members</h5>
-                    <div className="space-y-1">
-                      {functionalTeam.members.map((member, index) => (
-                        <div key={index} className="text-xs text-exl-slate bg-gray-50 px-2 py-1 rounded">
-                          {member}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  <div>
-                    <h5 className="font-semibold text-exl-midnight mb-2">Contact</h5>
-                    <p className="text-xs text-exl-slate bg-gray-50 px-2 py-1 rounded">{functionalTeam.contact}</p>
-                  </div>
+                <div>
+                  <h5 className="font-semibold text-exl-midnight mb-2">Architecture</h5>
+                  <p className="text-xs text-exl-slate leading-relaxed">{techDetails.architecture}</p>
                 </div>
-              )}
+                <div>
+                  <h5 className="font-semibold text-exl-midnight mb-2">Deployment</h5>
+                  <p className="text-xs text-exl-slate leading-relaxed">{techDetails.deployment}</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
