@@ -117,6 +117,7 @@ Changelog:
 - July 12, 2025. Reordered AI Trainer technologies to: React Native, Next.js, GPT-4o, Langchain, Blob Storage, Node.js
 - July 12, 2025. Created Coming Soon page for Gamification feature and updated navigation to redirect there
 - July 12, 2025. Modified VideoModal to show "Coming Soon" message for MiAI Call Simulator and Gamification Experience demos
+- July 12, 2025. Updated MiAI Simulator navigation link from "https://miaisimulator.exlservice.com/" to "https://miaisimulatorapp.exlservice.com/"
 
 ## User Preferences
 
