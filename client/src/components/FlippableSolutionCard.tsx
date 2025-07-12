@@ -162,7 +162,7 @@ export default function FlippableSolutionCard({
             <div className={`h-20 bg-gradient-to-br ${bgGradient} rounded-t-2xl relative overflow-hidden flex-shrink-0`}>
               <div className="absolute inset-0 bg-black bg-opacity-20"></div>
               <div className="absolute inset-0 flex items-center justify-between px-6">
-                <h3 className="text-xl font-bold text-white">{title} - Details</h3>
+                <h3 className="text-xl font-bold text-white">{title} - Highlights</h3>
                 <button
                   onClick={handleBackClick}
                   className="text-white hover:text-gray-200 transition-colors duration-200"
