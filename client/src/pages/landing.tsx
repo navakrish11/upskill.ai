@@ -20,7 +20,7 @@ const solutions = [
     productLink: "https://example.com/ai-trainer-product",
     functionalLink: "https://example.com/ai-trainer-functional",
     techDetails: {
-      technologies: ["React Native", "Langchain", "OpenAI GPT-4o", "Blog Blob Storage", "Next.js", "Node.js"],
+      technologies: ["React Native", "Next.js", "GPT-4o", "Langchain", "Blob Storage", "Node.js"],
       architecture: "Microservices architecture with AI model orchestration, real-time avatar rendering, and cloud-based document processing",
       deployment: "Azure Container Instances with auto-scaling, CDN for avatar assets, and global AI model distribution"
     },
