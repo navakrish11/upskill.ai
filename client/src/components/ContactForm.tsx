@@ -74,9 +74,9 @@ export default function ContactForm({ isVisible }: ContactFormProps) {
   if (!isVisible) return null;
 
   return (
-    <div className="bg-white rounded-2xl shadow-2xl p-8 lg:p-12">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid md:grid-cols-2 gap-6">
+    <div className="bg-white rounded-xl">
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="grid md:grid-cols-2 gap-4">
               {/* Full Name */}
               <div className="space-y-2">
                 <Label htmlFor="fullName" className="text-sm font-medium text-gray-700">
@@ -110,7 +110,7 @@ export default function ContactForm({ isVisible }: ContactFormProps) {
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-4">
               {/* Company */}
               <div className="space-y-2">
                 <Label htmlFor="company" className="text-sm font-medium text-gray-700">
@@ -148,10 +148,10 @@ export default function ContactForm({ isVisible }: ContactFormProps) {
             </div>
 
             {/* Submit Button */}
-            <div className="pt-4">
+            <div className="pt-2">
               <Button 
                 type="submit" 
-                className="w-full h-12 bg-exl-orange hover:bg-orange-600 text-white font-semibold text-lg rounded-lg transition-colors duration-200"
+                className="w-full h-11 bg-exl-orange hover:bg-orange-600 text-white font-semibold text-base rounded-lg transition-colors duration-200"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? "Submitting..." : "Book Your Demo"}

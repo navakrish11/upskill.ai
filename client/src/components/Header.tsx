@@ -53,12 +53,9 @@ export default function Header({ onBookDemo }: HeaderProps) {
           {/* Book Demo Button */}
           <button
             onClick={onBookDemo}
-            className="relative group cursor-pointer"
+            className="bg-exl-orange hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200"
           >
-            <div className="text-3xl font-bold text-exl-orange">
-              Book Your Demo
-            </div>
-            <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-exl-orange to-orange-600 group-hover:w-full transition-all duration-300"></div>
+            Book Demo
           </button>
         </div>
 

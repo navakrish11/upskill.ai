@@ -155,19 +155,19 @@ export default function Landing() {
       {/* Book Demo Popup */}
       {showContactForm && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative">
+          <div className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full max-h-[95vh] relative">
             <button
               onClick={() => setShowContactForm(false)}
-              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl z-10"
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl z-10 w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100"
             >
               ×
             </button>
-            <div className="p-8 lg:p-12">
-              <div className="text-center mb-8">
-                <h2 className="text-3xl lg:text-4xl font-bold text-exl-midnight">
+            <div className="p-6 lg:p-8">
+              <div className="text-center mb-6">
+                <h2 className="text-2xl lg:text-3xl font-bold text-exl-midnight">
                   Ready to Transform Your Training?
                 </h2>
-                <p className="text-lg max-w-3xl mx-auto text-exl-slate mt-4">
+                <p className="text-base max-w-2xl mx-auto text-exl-slate mt-3">
                   See Upskill.AI in action. Book a personalized demo and discover how AI can accelerate your team's learning journey.
                 </p>
               </div>
