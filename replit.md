@@ -106,6 +106,8 @@ Changelog:
 - July 09, 2025. Updated footer to match brand design with social media icons and 3-column layout
 - July 09, 2025. Added contact form component with demo booking functionality above footer
 - July 09, 2025. Updated solution card descriptions with more compelling and specific messaging
+- July 12, 2025. Fixed scroll bar issue in FlippableSolutionCard details view by optimizing content layout
+- July 12, 2025. Updated AI Trainer technology stack: replaced TensorFlow with Langchain, Unity 3D with Next.js, Azure Speech Services with Blob, and OpenAI GPT-4 with GPT-4o
 
 ## User Preferences
 
