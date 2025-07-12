@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [, setLocation] = useLocation();
 
 
 
@@ -60,7 +61,7 @@ export default function Header() {
               MiAI Simulator
             </button>
             <button 
-              onClick={() => scrollToCardAndFlip("gamification")}
+              onClick={() => setLocation("/coming-soon")}
               className="text-exl-slate hover:text-exl-orange transition-colors duration-200"
             >
               Gamification
@@ -100,7 +101,10 @@ export default function Header() {
               MiAI Simulator
             </button>
             <button 
-              onClick={() => scrollToCardAndFlip("gamification")}
+              onClick={() => {
+                setLocation("/coming-soon");
+                setMobileMenuOpen(false);
+              }}
               className="block text-exl-slate hover:text-exl-orange transition-colors duration-200"
             >
               Gamification

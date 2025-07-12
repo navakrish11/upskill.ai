@@ -115,6 +115,7 @@ Changelog:
 - July 12, 2025. Added "Up to 35% Reduction in Training Costs" metric to Technology Showcase business value section
 - July 12, 2025. Updated AI Trainer technology from "Blob" to "Blog Blob Storage"
 - July 12, 2025. Reordered AI Trainer technologies to: React Native, Next.js, GPT-4o, Langchain, Blob Storage, Node.js
+- July 12, 2025. Created Coming Soon page for Gamification feature and updated navigation to redirect there
 
 ## User Preferences
 
