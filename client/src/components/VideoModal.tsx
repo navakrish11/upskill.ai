@@ -12,7 +12,7 @@ export default function VideoModal({ isOpen, onClose, videoSrc, title }: VideoMo
   if (!isOpen) return null;
 
   // Check if this is a coming soon demo
-  const isComingSoon = videoSrc.includes("miai-call-demo") || videoSrc.includes("gamification-demo");
+  const isComingSoon = videoSrc.includes("miai-call-demo.mp4") || videoSrc.includes("gamification-demo.mp4");
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
