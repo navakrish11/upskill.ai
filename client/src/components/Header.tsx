@@ -55,7 +55,7 @@ export default function Header({ onBookDemo }: HeaderProps) {
             onClick={onBookDemo}
             className="relative group cursor-pointer"
           >
-            <div className="text-3xl font-bold bg-gradient-to-r from-exl-orange to-orange-600 bg-clip-text text-transparent">
+            <div className="text-3xl font-bold text-exl-orange">
               Book Your Demo
             </div>
             <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-exl-orange to-orange-600 group-hover:w-full transition-all duration-300"></div>
