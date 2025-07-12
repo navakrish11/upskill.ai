@@ -193,20 +193,6 @@ export default function FlippableSolutionCard({
               <button
                 onClick={(e) => {
                   e.stopPropagation();
-                  setActiveTab("product");
-                }}
-                className={`flex items-center px-4 py-3 font-medium text-sm transition-colors duration-200 flex-1 justify-center ${
-                  activeTab === "product"
-                    ? "text-exl-orange border-b-2 border-exl-orange bg-orange-50"
-                    : "text-exl-slate hover:text-exl-midnight"
-                }`}
-              >
-                <Users className="h-4 w-4 mr-2" />
-                Product Team
-              </button>
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
                   setActiveTab("functional");
                 }}
                 className={`flex items-center px-4 py-3 font-medium text-sm transition-colors duration-200 flex-1 justify-center ${
@@ -241,29 +227,6 @@ export default function FlippableSolutionCard({
                   <div>
                     <h5 className="font-semibold text-exl-midnight mb-2">Deployment</h5>
                     <p className="text-xs text-exl-slate leading-relaxed">{techDetails.deployment}</p>
-                  </div>
-                </div>
-              )}
-
-              {activeTab === "product" && (
-                <div className="space-y-3">
-                  <div>
-                    <h5 className="font-semibold text-exl-midnight mb-2">Team Lead</h5>
-                    <p className="text-xs text-exl-slate bg-gray-50 px-2 py-1 rounded">{productTeam.lead}</p>
-                  </div>
-                  <div>
-                    <h5 className="font-semibold text-exl-midnight mb-2">Team Members</h5>
-                    <div className="space-y-1">
-                      {productTeam.members.map((member, index) => (
-                        <div key={index} className="text-xs text-exl-slate bg-gray-50 px-2 py-1 rounded">
-                          {member}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  <div>
-                    <h5 className="font-semibold text-exl-midnight mb-2">Contact</h5>
-                    <p className="text-xs text-exl-slate bg-gray-50 px-2 py-1 rounded">{productTeam.contact}</p>
                   </div>
                 </div>
               )}
