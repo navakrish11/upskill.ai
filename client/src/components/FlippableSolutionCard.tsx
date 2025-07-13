@@ -29,7 +29,7 @@ function LaunchButton({ id }: { id: string }) {
   return (
     <button
       onClick={handleClick}
-      className="flex items-center justify-center bg-[#005071] text-white px-4 py-2 rounded-lg font-medium hover:bg-[#004060] transition-colors duration-200 w-full text-sm"
+      className="flex items-center justify-center bg-[#e6f2f5] text-[#005071] px-4 py-2 rounded-lg font-medium hover:bg-[#d9ecf0] transition-colors duration-200 w-full text-sm"
     >
       <ExternalLink className="h-5 w-5 mr-2" />
       Launch Application
