@@ -38,33 +38,6 @@ const solutions = [
     }
   },
   {
-    id: "miai-simulator",
-    title: "MiAI Call Simulator",
-    description: "Mock calls that feel real—because they are. Simulates real-world customer service calls with voice-based personas, Agentic-AI led instant 360° scoring, and detailed insights.",
-    bgGradient: "from-[hsl(207,100%,22%)] to-blue-600",
-    iconPath: "M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5A1 1 0 0 1 21 16.5V20A1 1 0 0 1 20 21A17 17 0 0 1 3 4A1 1 0 0 1 4 3H7.5A1 1 0 0 1 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z",
-    demoLink: "https://example.com/miai-call-demo",
-    videoSrc: "/videos/miai-call-demo.mp4",
-    techLink: "https://example.com/miai-call-tech",
-    productLink: "https://example.com/miai-call-product",
-    functionalLink: "https://example.com/miai-call-functional",
-    techDetails: {
-      technologies: ["WebRTC", "Python ML Pipeline", "Azure Cognitive Services", "Redis", "PostgreSQL", "React.js"],
-      architecture: "Real-time communication platform with AI-powered sentiment analysis, voice recognition, and adaptive response generation",
-      deployment: "Kubernetes cluster with load balancing, real-time analytics dashboard, and secure call recording infrastructure"
-    },
-    productTeam: {
-      lead: "Alex Thompson - Product Manager",
-      members: ["Jennifer Lee - UX Designer", "Carlos Rodriguez - Product Owner", "Emily Zhang - Business Analyst"],
-      contact: "miai-simulator-product@exl.com"
-    },
-    functionalTeam: {
-      lead: "Robert Chen - Operations Lead",
-      members: ["Ashley Brown - Call Center Expert", "Michael Davis - Quality Assurance", "Sandra Martinez - Training Coordinator"],
-      contact: "miai-simulator-functional@exl.com"
-    }
-  },
-  {
     id: "gamification",
     title: "Gamification Experience",
     description: "Make learning addictive and measurable. Gamified modules with leaderboards, badges, time-based unlocks, and mastery zones to drive completion and retention.",
@@ -89,6 +62,33 @@ const solutions = [
       lead: "Michelle Rodriguez - Learning Games Lead",
       members: ["Jason Kim - Educational Psychologist", "Amanda Foster - Content Developer", "Daniel Liu - Assessment Specialist"],
       contact: "gamification-functional@exl.com"
+    }
+  },
+  {
+    id: "miai-simulator",
+    title: "MiAI Call Simulator",
+    description: "Mock calls that feel real—because they are. Simulates real-world customer service calls with voice-based personas, Agentic-AI led instant 360° scoring, and detailed insights.",
+    bgGradient: "from-[hsl(207,100%,22%)] to-blue-600",
+    iconPath: "M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5A1 1 0 0 1 21 16.5V20A1 1 0 0 1 20 21A17 17 0 0 1 3 4A1 1 0 0 1 4 3H7.5A1 1 0 0 1 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z",
+    demoLink: "https://example.com/miai-call-demo",
+    videoSrc: "/videos/miai-call-demo.mp4",
+    techLink: "https://example.com/miai-call-tech",
+    productLink: "https://example.com/miai-call-product",
+    functionalLink: "https://example.com/miai-call-functional",
+    techDetails: {
+      technologies: ["WebRTC", "Python ML Pipeline", "Azure Cognitive Services", "Redis", "PostgreSQL", "React.js"],
+      architecture: "Real-time communication platform with AI-powered sentiment analysis, voice recognition, and adaptive response generation",
+      deployment: "Kubernetes cluster with load balancing, real-time analytics dashboard, and secure call recording infrastructure"
+    },
+    productTeam: {
+      lead: "Alex Thompson - Product Manager",
+      members: ["Jennifer Lee - UX Designer", "Carlos Rodriguez - Product Owner", "Emily Zhang - Business Analyst"],
+      contact: "miai-simulator-product@exl.com"
+    },
+    functionalTeam: {
+      lead: "Robert Chen - Operations Lead",
+      members: ["Ashley Brown - Call Center Expert", "Michael Davis - Quality Assurance", "Sandra Martinez - Training Coordinator"],
+      contact: "miai-simulator-functional@exl.com"
     }
   }
 ];
