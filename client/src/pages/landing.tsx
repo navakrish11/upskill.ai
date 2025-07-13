@@ -68,7 +68,7 @@ const solutions = [
     id: "gamification",
     title: "Gamification Experience",
     description: "Make learning addictive and measurable. Gamified modules with leaderboards, badges, time-based unlocks, and mastery zones to drive completion and retention.",
-    bgGradient: "from-[#dcf3fa] to-[#dcf3fa]",
+    bgGradient: "from-[#4d8da6] to-[#4d8da6]",
     iconPath: "M5 16L3 5H1V3H4L6 14H18L20 7H8V5H21C21.6 5 22 5.4 22 6C22 6.2 21.9 6.3 21.9 6.4L19.5 15.2C19.3 15.7 18.8 16 18.3 16H5ZM7 18C6.4 18 6 18.4 6 19S6.4 20 7 20 8 19.6 8 19 7.6 18 7 18ZM17 18C16.4 18 16 18.4 16 19S16.4 20 17 20 18 19.6 18 19 17.6 18 17 18Z",
     demoLink: "https://example.com/gamification-demo",
     videoSrc: "/videos/gamification-demo.mp4",
