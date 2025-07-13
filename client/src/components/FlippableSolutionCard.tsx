@@ -121,7 +121,7 @@ export default function FlippableSolutionCard({
   };
 
   return (
-    <div id={id} className="relative h-[380px] w-full perspective-1000">
+    <div id={id} className="relative h-[420px] w-full perspective-1000">
       <div
         className={`absolute inset-0 w-full h-full transition-transform duration-700 transform-style-preserve-3d cursor-pointer ${
           isFlipped ? 'rotate-y-180' : ''
