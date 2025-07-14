@@ -18,13 +18,15 @@ export default function HeroSection({ onVideoOpen }: HeroSectionProps) {
 
   return (
     <section className="bg-gradient-to-br from-exl-light to-white pt-4 pb-2 lg:pt-6 lg:pb-4">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-4xl mx-auto">
-          <div className="mb-2">
-            <h1 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-exl-midnight mb-1 leading-tight">
-              <span className="block">Reimagine Learning & Readiness with</span>
-              <span className="text-exl-orange block">EXL's AI Training Suite</span>
-            </h1>
+      <div className="w-full px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center max-w-4xl mx-auto">
+            <div className="mb-2">
+              <h1 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-exl-midnight mb-1 leading-tight">
+                <span className="block">Reimagine Learning & Readiness with</span>
+                <span className="text-exl-orange block">EXL's AI Training Suite</span>
+              </h1>
+            </div>
           </div>
         </div>
       </div>
