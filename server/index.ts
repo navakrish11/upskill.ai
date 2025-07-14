@@ -8,14 +8,22 @@ app.use(express.urlencoded({ extended: false }));
 
 // Add video streaming support for both development and production
 const videoPath = app.get("env") === "development" ? 'client/public/videos' : 'dist/public/videos';
+console.log(`Video serving path: ${videoPath}`);
 app.use('/videos', express.static(videoPath, {
   setHeaders: (res, path) => {
     if (path.endsWith('.mp4')) {
       res.set('Content-Type', 'video/mp4');
       res.set('Accept-Ranges', 'bytes');
+      res.set('Cache-Control', 'public, max-age=31536000');
     }
   }
 }));
+
+// Add video route debugging
+app.get('/videos/:filename', (req, res, next) => {
+  console.log(`Video request for: ${req.params.filename}`);
+  next();
+});
 
 app.use((req, res, next) => {
   const start = Date.now();
