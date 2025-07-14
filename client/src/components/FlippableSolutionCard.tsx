@@ -99,7 +99,13 @@ export default function FlippableSolutionCard({
   }, [id]);
 
   const handleDemoClick = () => {
-    onVideoOpen(videoSrc, title);
+    if (id === "gamification" || id === "miai-simulator") {
+      // Show coming soon message for these cards
+      alert("Coming Soon! This demo will be available shortly.");
+    } else {
+      // For AI Trainer, show the actual video
+      onVideoOpen(videoSrc, title);
+    }
   };
 
   const handleCardClick = () => {
