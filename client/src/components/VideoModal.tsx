@@ -6,13 +6,11 @@ interface VideoModalProps {
   onClose: () => void;
   videoSrc: string;
   title: string;
+  isComingSoon?: boolean;
 }
 
-export default function VideoModal({ isOpen, onClose, videoSrc, title }: VideoModalProps) {
+export default function VideoModal({ isOpen, onClose, videoSrc, title, isComingSoon = false }: VideoModalProps) {
   if (!isOpen) return null;
-
-  // All videos are now available - no coming soon needed
-  const isComingSoon = false;
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">

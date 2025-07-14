@@ -48,7 +48,7 @@ interface FlippableSolutionCardProps {
   techLink: string;
   productLink: string;
   functionalLink: string;
-  onVideoOpen: (videoSrc: string, title: string) => void;
+  onVideoOpen: (videoSrc: string, title: string, isComingSoon?: boolean) => void;
   techDetails: {
     technologies: string[];
     architecture: string;
@@ -100,11 +100,11 @@ export default function FlippableSolutionCard({
 
   const handleDemoClick = () => {
     if (id === "gamification" || id === "miai-simulator") {
-      // Show coming soon message for these cards
-      alert("Coming Soon! This demo will be available shortly.");
+      // Show coming soon modal for these cards
+      onVideoOpen("", title, true);
     } else {
       // For AI Trainer, show the actual video
-      onVideoOpen(videoSrc, title);
+      onVideoOpen(videoSrc, title, false);
     }
   };
 

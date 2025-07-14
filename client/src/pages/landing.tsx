@@ -98,19 +98,22 @@ export default function Landing() {
     isOpen: boolean;
     videoSrc: string;
     title: string;
+    isComingSoon: boolean;
   }>({
     isOpen: false,
     videoSrc: "",
-    title: ""
+    title: "",
+    isComingSoon: false
   });
 
   const [showContactForm, setShowContactForm] = useState(false);
 
-  const handleVideoOpen = (videoSrc: string, title: string) => {
+  const handleVideoOpen = (videoSrc: string, title: string, isComingSoon: boolean = false) => {
     setVideoModal({
       isOpen: true,
       videoSrc,
-      title
+      title,
+      isComingSoon
     });
   };
 
@@ -118,7 +121,8 @@ export default function Landing() {
     setVideoModal({
       isOpen: false,
       videoSrc: "",
-      title: ""
+      title: "",
+      isComingSoon: false
     });
   };
 
@@ -186,6 +190,7 @@ export default function Landing() {
         onClose={handleVideoClose}
         videoSrc={videoModal.videoSrc}
         title={videoModal.title}
+        isComingSoon={videoModal.isComingSoon}
       />
     </div>
   );

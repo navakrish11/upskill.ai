@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 
 interface HeroSectionProps {
-  onVideoOpen: (videoSrc: string, title: string) => void;
+  onVideoOpen: (videoSrc: string, title: string, isComingSoon?: boolean) => void;
 }
 
 export default function HeroSection({ onVideoOpen }: HeroSectionProps) {
