@@ -37,7 +37,7 @@ export default function Header({ onBookDemo }: HeaderProps) {
 
   return (
     <header className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
-      <div className="w-full px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-6 sm:px-8 lg:px-12 xl:px-16">
         <div className="flex items-center justify-between py-2 w-full">
           {/* EXL Logo - Extreme Left */}
           <div className="flex items-center space-x-3 flex-shrink-0">

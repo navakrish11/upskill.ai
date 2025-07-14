@@ -133,8 +133,8 @@ export default function Landing() {
       
       {/* Platform Overview Section */}
       <section className="py-4 lg:py-6 bg-white">
-        <div className="w-full px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
+        <div className="w-full px-6 sm:px-8 lg:px-12 xl:px-16">
+          <div className="max-w-7xl mx-auto">
             {/* Section Header */}
             <div className="text-center mb-6">
               <h2 className="text-2xl lg:text-3xl font-bold text-exl-midnight mb-2">
@@ -146,7 +146,7 @@ export default function Landing() {
           </div>
           
           {/* Solutions Grid */}
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-start max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 lg:gap-12 items-start max-w-none mx-auto">
             {solutions.map((solution) => (
               <FlippableSolutionCard 
                 key={solution.id}
