@@ -37,10 +37,10 @@ export default function Header({ onBookDemo }: HeaderProps) {
 
   return (
     <header className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between py-2">
-          {/* EXL Logo */}
-          <div className="flex items-center space-x-3">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between py-2 w-full">
+          {/* EXL Logo - Extreme Left */}
+          <div className="flex items-center space-x-3 flex-shrink-0">
             <img 
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/EXL_Service_logo.svg/1200px-EXL_Service_logo.svg.png" 
               alt="EXL Service Logo" 
@@ -50,8 +50,8 @@ export default function Header({ onBookDemo }: HeaderProps) {
             <span className="text-xl font-semibold text-exl-midnight">Upskill.AI</span>
           </div>
           
-          {/* Book Demo Button */}
-          <div className="flex-shrink-0">
+          {/* Book Demo Button - Extreme Right */}
+          <div className="flex-shrink-0 ml-auto">
             <button
               onClick={onBookDemo}
               className="bg-exl-orange hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200"
