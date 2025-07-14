@@ -51,12 +51,14 @@ export default function Header({ onBookDemo }: HeaderProps) {
           </div>
           
           {/* Book Demo Button */}
-          <button
-            onClick={onBookDemo}
-            className="bg-exl-orange hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200"
-          >
-            Book Demo
-          </button>
+          <div className="flex-shrink-0">
+            <button
+              onClick={onBookDemo}
+              className="bg-exl-orange hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200"
+            >
+              Book Demo
+            </button>
+          </div>
         </div>
 
 
