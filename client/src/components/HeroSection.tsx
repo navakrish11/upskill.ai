@@ -22,8 +22,8 @@ export default function HeroSection({ onVideoOpen }: HeroSectionProps) {
         <div className="text-center max-w-4xl mx-auto">
           <div className="mb-2">
             <h1 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-exl-midnight mb-1 leading-tight">
-              <span className="block sm:inline">Reimagine Learning & Readiness with</span>{' '}
-              <span className="text-exl-orange">EXL's AI Training Suite</span>
+              <span className="block">Reimagine Learning & Readiness with</span>
+              <span className="text-exl-orange block">EXL's AI Training Suite</span>
             </h1>
           </div>
         </div>
