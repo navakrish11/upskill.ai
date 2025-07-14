@@ -17,8 +17,15 @@ export default function HeroSection({ onVideoOpen }: HeroSectionProps) {
   };
 
   return (
-    <section className="bg-gradient-to-br from-exl-light to-white pt-4 pb-2 lg:pt-6 lg:pb-4">
-      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 2xl:px-20">
+    <section className="bg-gradient-to-br from-exl-light to-white pt-4 pb-2 lg:pt-6 lg:pb-4 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-50 via-white to-orange-50 opacity-60"></div>
+      <div className="absolute top-0 left-0 w-full h-full">
+        <div className="absolute top-10 left-10 w-20 h-20 bg-exl-orange opacity-5 rounded-full"></div>
+        <div className="absolute top-20 right-20 w-32 h-32 bg-exl-midnight opacity-5 rounded-full"></div>
+        <div className="absolute bottom-10 left-1/4 w-16 h-16 bg-exl-orange opacity-5 rounded-full"></div>
+        <div className="absolute bottom-20 right-1/3 w-24 h-24 bg-exl-midnight opacity-5 rounded-full"></div>
+      </div>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-4xl mx-auto">
           <div className="mb-2">
             <svg 

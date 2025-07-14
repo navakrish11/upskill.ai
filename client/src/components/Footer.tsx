@@ -27,7 +27,7 @@ export default function Footer() {
 
   return (
     <footer id="contact" className="bg-gray-900 text-white py-8">
-      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 2xl:px-20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8 mb-6">
           {/* Company Info */}
           <div>

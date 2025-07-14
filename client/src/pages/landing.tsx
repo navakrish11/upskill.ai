@@ -127,13 +127,20 @@ export default function Landing() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white w-full">
       <Header onBookDemo={() => setShowContactForm(true)} />
       <HeroSection onVideoOpen={handleVideoOpen} />
       
       {/* Platform Overview Section */}
-      <section className="py-4 lg:py-6 bg-white">
-        <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 2xl:px-20">
+      <section className="py-4 lg:py-6 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-50 via-white to-gray-50 opacity-50"></div>
+        <div className="absolute top-0 left-0 w-full h-full">
+          <div className="absolute top-16 left-16 w-32 h-32 bg-exl-orange opacity-3 rounded-full"></div>
+          <div className="absolute top-32 right-24 w-24 h-24 bg-exl-midnight opacity-3 rounded-full"></div>
+          <div className="absolute bottom-16 left-1/3 w-28 h-28 bg-exl-orange opacity-3 rounded-full"></div>
+          <div className="absolute bottom-32 right-1/4 w-36 h-36 bg-exl-midnight opacity-3 rounded-full"></div>
+        </div>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section Header */}
           <div className="text-center mb-6">
             <h2 className="text-2xl lg:text-3xl font-bold text-exl-midnight mb-2">
