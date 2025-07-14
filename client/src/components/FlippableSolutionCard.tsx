@@ -149,7 +149,7 @@ export default function FlippableSolutionCard({
             
             <div className="p-4 flex flex-col flex-grow">
               <h3 className="text-lg font-bold text-exl-midnight mb-3">{title}</h3>
-              <div className="h-24 overflow-hidden mb-4">
+              <div className="h-24 overflow-hidden mb-2">
                 <p className="text-sm text-exl-slate leading-snug">
                   {description}
                 </p>
