@@ -17,67 +17,15 @@ export default function HeroSection({ onVideoOpen }: HeroSectionProps) {
   };
 
   return (
-    <section className="bg-gradient-to-br from-exl-light to-white pt-4 pb-2 lg:pt-6 lg:pb-4 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-50 via-white to-orange-50 opacity-60"></div>
-      <div className="absolute top-0 left-0 w-full h-full">
-        <div className="absolute top-10 left-10 w-20 h-20 bg-exl-orange opacity-5 rounded-full"></div>
-        <div className="absolute top-20 right-20 w-32 h-32 bg-exl-midnight opacity-5 rounded-full"></div>
-        <div className="absolute bottom-10 left-1/4 w-16 h-16 bg-exl-orange opacity-5 rounded-full"></div>
-        <div className="absolute bottom-20 right-1/3 w-24 h-24 bg-exl-midnight opacity-5 rounded-full"></div>
-      </div>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section className="bg-gradient-to-br from-exl-light to-white pt-4 pb-2 lg:pt-6 lg:pb-4">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-4xl mx-auto">
           <div className="mb-2">
-            <svg 
-              viewBox="0 0 800 120" 
-              className="w-full max-w-4xl mx-auto h-auto cursor-pointer"
-              style={{ filter: 'drop-shadow(2px 4px 8px rgba(0,0,0,0.1))' }}
-              title="Upskill.AI is EXL's flagship initiative transforming new hire and lateral training through cutting-edge AI, gamification, and simulation technologies. A unified platform accelerating time-to-proficiency through intelligent avatars, real-life simulations, and competitive learning journeys."
-            >
-              <defs>
-                <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" style={{ stopColor: '#ea580c', stopOpacity: 1 }} />
-                  <stop offset="100%" style={{ stopColor: '#f97316', stopOpacity: 1 }} />
-                </linearGradient>
-                <linearGradient id="textGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" style={{ stopColor: '#1e293b', stopOpacity: 1 }} />
-                  <stop offset="100%" style={{ stopColor: '#334155', stopOpacity: 1 }} />
-                </linearGradient>
-              </defs>
-              
-              {/* Main text */}
-              <text 
-                x="400" 
-                y="35" 
-                textAnchor="middle" 
-                className="text-2xl lg:text-3xl font-bold"
-                fill="url(#textGradient)"
-                style={{ fontSize: '28px', fontWeight: 'bold', fontFamily: 'system-ui, -apple-system, sans-serif' }}
-              >
-                Reimagine Learning & Readiness with
-              </text>
-              
-              {/* EXL's AI Training Suite - highlighted */}
-              <text 
-                x="400" 
-                y="75" 
-                textAnchor="middle" 
-                className="text-2xl lg:text-3xl font-bold"
-                fill="url(#orangeGradient)"
-                style={{ fontSize: '32px', fontWeight: 'bold', fontFamily: 'system-ui, -apple-system, sans-serif' }}
-              >
-                EXL's AI Training Suite
-              </text>
-              
-              {/* Decorative elements */}
-              <circle cx="50" cy="60" r="3" fill="url(#orangeGradient)" opacity="0.6" />
-              <circle cx="750" cy="60" r="3" fill="url(#orangeGradient)" opacity="0.6" />
-              <rect x="70" y="58" width="20" height="4" fill="url(#orangeGradient)" opacity="0.4" rx="2" />
-              <rect x="710" y="58" width="20" height="4" fill="url(#orangeGradient)" opacity="0.4" rx="2" />
-            </svg>
+            <h1 className="text-3xl lg:text-4xl font-bold text-exl-midnight mb-1">
+              Reimagine Learning & Readiness with{' '}
+              <span className="text-exl-orange">EXL's AI Training Suite</span>
+            </h1>
           </div>
-
-
         </div>
       </div>
     </section>
