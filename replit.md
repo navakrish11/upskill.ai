@@ -126,6 +126,9 @@ Changelog:
 - July 12, 2025. Enhanced flip side visual design with gradient backgrounds, decorative elements, simple dot bullets, and colored bottom sections matching header themes
 - July 12, 2025. Fixed video deployment issue by configuring proper video serving routes with MIME types and streaming headers for both development and production environments
 - July 12, 2025. Updated Gamification "Launch Application" button to show "Coming Soon" message when clicked, maintaining consistent UI appearance across all cards
+- July 14, 2025. Replaced AI trainer demo video with new "Introduction to AI Trainer3" version (62MB)
+- July 14, 2025. Fixed white space issue in production deployment by optimizing container layouts and removing decorative background elements for cleaner design
+- July 14, 2025. Updated header layout to position EXL/Upskill.AI branding on extreme left and Book Demo button on extreme right for better screen utilization
 
 ## User Preferences
 
